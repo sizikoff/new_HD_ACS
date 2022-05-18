@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "47278095266",
+    "project_id": "happydayacs",
+    "storage_bucket": "happydayacs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47278095266:android:9ed1bba466958d14d910fb",
+        "android_client_info": {
+          "package_name": "com.example.hd_acs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47278095266-bev38o0dtoldk0up7l7rabp22hgdg1dt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hd_acs",
+            "certificate_hash": "28f30c0585782dc5872943877dffaf90cb00099b"
+          }
+        },
+        {
+          "client_id": "47278095266-0ekqt5lqi091dkt5k9li8eitbn6r8okc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCynCqMkX7lzbZtTjgPNbdeEHRIZz205VQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47278095266-0ekqt5lqi091dkt5k9li8eitbn6r8okc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

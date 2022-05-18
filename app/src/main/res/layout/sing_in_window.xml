@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/emailField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hnt_email"
+            android:inputType="textEmailAddress"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:met_baseColor="@color/white"
+
+            app:met_errorColor="@color/error"
+            app:met_primaryColor="@color/white"
+            app:met_textColorHint="@color/light_gray" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/passwordField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hnt_password"
+            android:inputType="textPassword"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:met_baseColor="@color/white"
+
+            app:met_errorColor="@color/error"
+            app:met_primaryColor="@color/white"
+            app:met_textColorHint="@color/light_gray" />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
