@@ -12,7 +12,7 @@ import android.widget.ImageButton;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btnWrkPrs, btnManufProd, btnStorage, btnManufProdCrt, btnStorageCrt,btnDefProd ,btnDefProdCrt;
-    private ImageButton btnNavLeftOpener, btnNavRightOpener, btnNavLeftCloser, btnNavRightCloser;
+    private ImageButton btnNavLeftOpener, btnNavRightOpener, btnNavLeftCloser, btnNavRightCloser, imgBtnOptions, imgBtnHome, imgBtnProfile;
     private FrameLayout navBarLeft, navBarRight;
 
     @Override
@@ -31,7 +31,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnNavLeftOpener = (ImageButton) findViewById(R.id.btnNavLeftOpener);
         btnNavRightOpener = (ImageButton) findViewById(R.id.btnNavRightOpener);
         btnNavLeftCloser = (ImageButton) findViewById(R.id.btnNavLeftCloser);
-        btnNavRightCloser = (ImageButton) findViewById(R.id.btnNavRightCloser);
+        btnNavRightCloser = (ImageButton) findViewById(R.id.btnNavLeftCloser);
+        imgBtnOptions = (ImageButton) findViewById(R.id.imgBtnOptions);
+        imgBtnHome = (ImageButton) findViewById(R.id.imgBtnHome);
+        imgBtnProfile = (ImageButton) findViewById(R.id.imgBtnProfile);
 
         navBarLeft = (FrameLayout) findViewById(R.id.navBarLeft);
         navBarRight = (FrameLayout) findViewById(R.id.navBarRight);
@@ -48,6 +51,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnNavRightOpener.setOnClickListener(this);
         btnNavLeftCloser.setOnClickListener(this);
         btnNavRightCloser.setOnClickListener(this);
+
+        imgBtnOptions.setOnClickListener(this);
+        imgBtnHome.setOnClickListener(this);
+        imgBtnProfile.setOnClickListener(this);
 
     }
 
@@ -89,6 +96,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(actDPCA);
                 finish();
                 break;
+            case R.id.imgBtnHome:
+                Intent actHome = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(actHome);
+                finish();
+                break;
             case R.id.btnNavLeftOpener:
                 navBarLeft.setVisibility(View.VISIBLE);
                 navBarRight.setVisibility(View.INVISIBLE);
@@ -100,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnNavLeftCloser:
                 navBarLeft.setVisibility(View.INVISIBLE);
                 break;
-            case R.id.btnNavRightCloser:
+            case R.id.btnNavLeftCloser:
                 navBarRight.setVisibility(View.INVISIBLE);
                 break;
         }

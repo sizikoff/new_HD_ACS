@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,11 +12,8 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 
-import com.example.hd_acs.Models.ManufProd;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import org.json.JSONArray;
 
 public class ManufacturedProductsCreateActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -44,7 +40,7 @@ public class ManufacturedProductsCreateActivity extends AppCompatActivity implem
         btnCrtReport = (Button) findViewById(R.id.btnCrtReport);
 
         btnNavRightOpener = (ImageButton) findViewById(R.id.btnNavRightOpener);
-        btnNavRightCloser = (ImageButton) findViewById(R.id.btnNavRightCloser);
+        btnNavRightCloser = (ImageButton) findViewById(R.id.btnNavLeftCloser);
         imgBtnHome = (ImageButton) findViewById(R.id.imgBtnHome);
 
         navBarLeft = (FrameLayout) findViewById(R.id.navBarLeft);
@@ -85,7 +81,7 @@ public class ManufacturedProductsCreateActivity extends AppCompatActivity implem
 
         switch (v.getId()) {
             case R.id.btnWrkPrs:
-                Intent actWPA = new Intent(ManufacturedProductsCreateActivity.this, WorkerProgressActivity.class);
+                Intent actWPA = new Intent(ManufacturedProductsCreateActivity.this, WorkersProgressActivity.class);
                 startActivity(actWPA);
                 finish();
                 break;
@@ -112,31 +108,13 @@ public class ManufacturedProductsCreateActivity extends AppCompatActivity implem
             case R.id.btnNavRightOpener:
                 navBarLeft.setVisibility(View.VISIBLE);
                 break;
-            case R.id.btnNavRightCloser:
+            case R.id.btnNavLeftCloser:
                 navBarLeft.setVisibility(View.INVISIBLE);
                 break;
             case R.id.imgBtnHome:
                 Intent homeBtn = new Intent(ManufacturedProductsCreateActivity.this, MainActivity.class);
                 startActivity(homeBtn);
                 finish();
-                break;
-            case R.id.btnCrtReport:
-//                String id = mDataBase.getKey();
-//                String model = edTxtModel.getText().toString();
-//                String material = edTxtMaterial.getText().toString();
-//                String color = edTxtColor.getText().toString();
-//                String worker = edTxtWorker.getText().toString();
-//                String amount = edTxtAmount.getText().toString();
-//                ManufProd manufProd = new ManufProd(id, model, material, color, worker, amount);
-//                mDataBase.push().setValue(manufProd);
-
-                contentValuse.put(DBHelper.KEY_MODEL, model);
-                contentValuse.put(DBHelper.KEY_MATERIAL, material);
-                contentValuse.put(DBHelper.KEY_COLOR, color);
-                contentValuse.put(DBHelper.KEY_WORKER, worker);
-                contentValuse.put(DBHelper.KEY_AMOUNT, amount);
-
-                database.insert(DBHelper.TABLE_MNFPRODCRT, null, contentValuse) ;
                 break;
         }
     }

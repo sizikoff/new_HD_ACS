@@ -54,7 +54,7 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:id="@+id/btnNavOpenerOpener"
+                    android:id="@+id/btnNavLeftOpener"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="center"
@@ -382,8 +382,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:visibility="gone">
+        android:orientation="horizontal">
 
         <FrameLayout
             android:id="@+id/navBarLeft"
@@ -483,7 +482,7 @@
                 </LinearLayout>
 
                 <ImageButton
-                    android:id="@+id/btnNavRightCloser"
+                    android:id="@+id/btnNavLeftCloser"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="center"

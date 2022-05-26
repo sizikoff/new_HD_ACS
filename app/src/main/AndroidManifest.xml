@@ -32,9 +32,6 @@
             android:name=".ManufacturedProductsActivity"
             android:exported="false" />
         <activity
-            android:name=".WorkerProgressActivity"
-            android:exported="false" />
-        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
