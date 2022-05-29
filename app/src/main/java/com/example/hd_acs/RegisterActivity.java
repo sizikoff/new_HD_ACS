@@ -9,10 +9,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.example.hd_acs.Models.User;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -85,11 +87,17 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int which) {
                 if(TextUtils.isEmpty(email.getText().toString())) {
-                    Snackbar.make(root, "Введите ваш e-mail", Snackbar.LENGTH_LONG).show();
+                    Toast EnterEmail = Toast.makeText(getApplicationContext(),"Введите ваш e-mail", Toast.LENGTH_LONG);
+                    EnterEmail.setGravity(Gravity.BOTTOM, 0, 100);
+                    EnterEmail.show();
+//                    Snackbar.make(root, "Введите ваш e-mail", Snackbar.LENGTH_LONG).show();
                     return;
                 }
                 if(password.getText().toString().length() < 6) {
-                    Snackbar.make(root, "Введите пороль более 6 символов", Snackbar.LENGTH_LONG).show();
+                    Toast EnterPass = Toast.makeText(getApplicationContext(),"Введите пороль более 6 символов", Toast.LENGTH_LONG);
+                    EnterPass.setGravity(Gravity.BOTTOM, 0, 100);
+                    EnterPass.show();
+//                    Snackbar.make(root, "Введите пороль более 6 символов", Snackbar.LENGTH_LONG).show();
                     return;
                 }
 
@@ -103,7 +111,10 @@ public class RegisterActivity extends AppCompatActivity {
                         }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Snackbar.make(root,"Ошибка авторизации" + e.getMessage(), Snackbar.LENGTH_LONG).show();
+                        Toast LoginFailed = Toast.makeText(getApplicationContext(),"Ошибка авторизации", Toast.LENGTH_LONG);
+                        LoginFailed.setGravity(Gravity.BOTTOM, 0, 100);
+                        LoginFailed.show();
+//                        Snackbar.make(root,"Ошибка авторизации" + e.getMessage(), Snackbar.LENGTH_LONG).show();
                     }
                 });
             }
@@ -135,15 +146,24 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int which) {
                 if(TextUtils.isEmpty(email.getText().toString())) {
-                    Snackbar.make(root, "Введите ваш e-mail", Snackbar.LENGTH_LONG).show();
+                    Toast EnterEmail = Toast.makeText(getApplicationContext(),"Введите ваш e-mail", Toast.LENGTH_LONG);
+                    EnterEmail.setGravity(Gravity.BOTTOM, 0, 100);
+                    EnterEmail.show();
+//                    Snackbar.make(root, "Введите ваш e-mail", Snackbar.LENGTH_LONG).show();
                     return;
                 }
                 if(TextUtils.isEmpty(name.getText().toString())) {
-                    Snackbar.make(root, "Введите ваше имя", Snackbar.LENGTH_LONG).show();
+                    Toast EnterName = Toast.makeText(getApplicationContext(),"Введите ваше имя", Toast.LENGTH_LONG);
+                    EnterName.setGravity(Gravity.BOTTOM, 0, 100);
+                    EnterName.show();
+//                    Snackbar.make(root, "Введите ваше имя", Snackbar.LENGTH_LONG).show();
                     return;
                 }
                 if(password.getText().toString().length() < 6) {
-                    Snackbar.make(root, "Введите пороль более 6 символов", Snackbar.LENGTH_LONG).show();
+                    Toast EnterPass = Toast.makeText(getApplicationContext(),"Введите пороль более 6 символов", Toast.LENGTH_LONG);
+                    EnterPass.setGravity(Gravity.BOTTOM, 0, 100);
+                    EnterPass.show();
+//                    Snackbar.make(root, "Введите пороль более 6 символов", Snackbar.LENGTH_LONG).show();
                     return;
                 }
 
@@ -161,14 +181,20 @@ public class RegisterActivity extends AppCompatActivity {
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
                                             public void onSuccess(Void unused) {
-                                                Snackbar.make(root, "Пользователь добавлен", Snackbar.LENGTH_LONG).show();
+                                                Toast UserAdded = Toast.makeText(getApplicationContext(),"Пользователь добавлен", Toast.LENGTH_LONG);
+                                                UserAdded.setGravity(Gravity.BOTTOM, 0, 100);
+                                                UserAdded.show();
+//                                                Snackbar.make(root, "Пользователь добавлен", Snackbar.LENGTH_LONG).show();
                                             }
                                         });
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Snackbar.make(root, "Ошибка регистрации" + e.getMessage(), Snackbar.LENGTH_LONG).show();
+                        Toast UserAddFailed = Toast.makeText(getApplicationContext(),"Ошибка регистрации", Toast.LENGTH_LONG);
+                        UserAddFailed.setGravity(Gravity.BOTTOM, 0, 100);
+                        UserAddFailed.show();
+//                        Snackbar.make(root, "Ошибка регистрации" + e.getMessage(), Snackbar.LENGTH_LONG).show();
                     }
                 });
 

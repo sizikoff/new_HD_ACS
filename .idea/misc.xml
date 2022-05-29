@@ -11,7 +11,7 @@
         <entry key="..\:/AndroidStudio/HD_ACS/app/src/main/res/layout/activity_defect_products.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudio/HD_ACS/app/src/main/res/layout/activity_defect_products_create.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudio/HD_ACS/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/AndroidStudio/HD_ACS/app/src/main/res/layout/activity_manufactured_products.xml" value="0.33" />
+        <entry key="..\:/AndroidStudio/HD_ACS/app/src/main/res/layout/activity_manufactured_products.xml" value="0.25" />
         <entry key="..\:/AndroidStudio/HD_ACS/app/src/main/res/layout/activity_manufactured_products_create.xml" value="0.33" />
         <entry key="..\:/AndroidStudio/HD_ACS/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/AndroidStudio/HD_ACS/app/src/main/res/layout/activity_splash.xml" value="0.2884963768115942" />
@@ -34,7 +34,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.33" />
+        <option name="scale" value="0.1" />
       </ProjectState>
     </option>
   </component>

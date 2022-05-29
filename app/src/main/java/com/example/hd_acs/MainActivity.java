@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnNavLeftOpener = (ImageButton) findViewById(R.id.btnNavLeftOpener);
         btnNavRightOpener = (ImageButton) findViewById(R.id.btnNavRightOpener);
         btnNavLeftCloser = (ImageButton) findViewById(R.id.btnNavLeftCloser);
-        btnNavRightCloser = (ImageButton) findViewById(R.id.btnNavLeftCloser);
+        btnNavRightCloser = (ImageButton) findViewById(R.id.btnNavRightCloser);
         imgBtnOptions = (ImageButton) findViewById(R.id.imgBtnOptions);
         imgBtnHome = (ImageButton) findViewById(R.id.imgBtnHome);
         imgBtnProfile = (ImageButton) findViewById(R.id.imgBtnProfile);
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnNavLeftCloser:
                 navBarLeft.setVisibility(View.INVISIBLE);
                 break;
-            case R.id.btnNavLeftCloser:
+            case R.id.btnNavRightCloser:
                 navBarRight.setVisibility(View.INVISIBLE);
                 break;
         }

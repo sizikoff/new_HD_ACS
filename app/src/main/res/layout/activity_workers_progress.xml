@@ -331,8 +331,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:visibility="gone">
+        android:orientation="horizontal">
 
         <FrameLayout
             android:id="@+id/navBarLeft"
@@ -369,6 +368,8 @@
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
                         android:layout_weight="4">
 
                     </FrameLayout>
@@ -378,6 +379,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
                         android:background="@color/none"
                         android:fontFamily="@font/ubuntu_medium"
                         android:text="@string/btnWrkPrs"
@@ -388,9 +391,23 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
                         android:background="@color/none"
                         android:fontFamily="@font/ubuntu_medium"
                         android:text="@string/btnManufProd"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/btnDefProd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/none"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="@string/btnDefProd"
                         android:textSize="15sp" />
 
                     <Button
@@ -398,19 +415,44 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
                         android:background="@color/none"
                         android:fontFamily="@font/ubuntu_medium"
                         android:text="@string/btnStorage"
                         android:textSize="15sp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="3">
+
+                    </FrameLayout>
 
                     <Button
                         android:id="@+id/btnManufProdCrt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
                         android:background="@color/none"
                         android:fontFamily="@font/ubuntu_medium"
                         android:text="@string/btnManufProdCrt"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/btnDefProdCrt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/none"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="@string/btnDefProdCrt"
                         android:textSize="15sp" />
 
                     <Button
@@ -418,6 +460,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
                         android:background="@color/none"
                         android:fontFamily="@font/ubuntu_medium"
                         android:text="@string/btnStorageCrt"

@@ -18,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class ManufacturedProductsCreateActivity extends AppCompatActivity implements View.OnClickListener {
 
      private Button btnWrkPrs, btnManufProd, btnStorage, btnManufProdCrt, btnStorageCrt, btnCrtReport;
-     private ImageButton btnNavRightOpener, btnNavRightCloser, imgBtnHome;
+     private ImageButton btnNavRightOpener, btnNavRightCloser, imgBtnOptions, imgBtnHome, imgBtnProfile;
      private FrameLayout navBarLeft;
      private EditText edTxtModel, edTxtMaterial, edTxtColor, edTxtWorker, edTxtAmount;
      private DatabaseReference mDataBase;
@@ -32,7 +32,7 @@ public class ManufacturedProductsCreateActivity extends AppCompatActivity implem
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manufactured_products_create);
 
-        btnWrkPrs = (Button) findViewById(R.id.btnWrkPrs);
+        btnWrkPrs = (Button) findViewById(R.id.btnDefProd);
         btnManufProd = (Button) findViewById(R.id.btnManufProd);
         btnStorage = (Button) findViewById(R.id.btnStorage);
         btnManufProdCrt = (Button) findViewById(R.id.btnManufProdCrt);
@@ -41,7 +41,9 @@ public class ManufacturedProductsCreateActivity extends AppCompatActivity implem
 
         btnNavRightOpener = (ImageButton) findViewById(R.id.btnNavRightOpener);
         btnNavRightCloser = (ImageButton) findViewById(R.id.btnNavLeftCloser);
+        imgBtnOptions = (ImageButton) findViewById(R.id.imgBtnOptions);
         imgBtnHome = (ImageButton) findViewById(R.id.imgBtnHome);
+        imgBtnProfile = (ImageButton) findViewById(R.id.imgBtnProfile);
 
         navBarLeft = (FrameLayout) findViewById(R.id.navBarLeft);
 
@@ -65,6 +67,10 @@ public class ManufacturedProductsCreateActivity extends AppCompatActivity implem
         btnNavRightOpener.setOnClickListener(this);
         btnNavRightCloser.setOnClickListener(this);
 
+        imgBtnOptions.setOnClickListener(this);
+        imgBtnHome.setOnClickListener(this);
+        imgBtnProfile.setOnClickListener(this);
+
     }
 
     @Override
@@ -80,7 +86,7 @@ public class ManufacturedProductsCreateActivity extends AppCompatActivity implem
         ContentValues contentValuse = new ContentValues();
 
         switch (v.getId()) {
-            case R.id.btnWrkPrs:
+            case R.id.btnDefProd:
                 Intent actWPA = new Intent(ManufacturedProductsCreateActivity.this, WorkersProgressActivity.class);
                 startActivity(actWPA);
                 finish();

@@ -20,7 +20,7 @@ public class DefectProductsActivity extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_defect_products);
 
-        btnWrkPrs = (Button) findViewById(R.id.btnWrkPrs);
+        btnWrkPrs = (Button) findViewById(R.id.btnDefProd);
         btnManufProd = (Button) findViewById(R.id.btnManufProd);
         btnStorage = (Button) findViewById(R.id.btnStorage);
         btnManufProdCrt = (Button) findViewById(R.id.btnManufProdCrt);

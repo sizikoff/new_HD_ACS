@@ -20,7 +20,7 @@ public class ManufacturedProductsActivity extends AppCompatActivity implements V
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manufactured_products);
 
-        btnWrkPrs = (Button) findViewById(R.id.btnWrkPrs);
+        btnWrkPrs = (Button) findViewById(R.id.btnDefProd);
         btnManufProd = (Button) findViewById(R.id.btnManufProd);
         btnStorage = (Button) findViewById(R.id.btnStorage);
         btnManufProdCrt = (Button) findViewById(R.id.btnManufProdCrt);

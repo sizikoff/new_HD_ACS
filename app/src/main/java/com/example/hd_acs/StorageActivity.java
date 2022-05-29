@@ -20,7 +20,7 @@ public class StorageActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_storage);
 
-        btnWrkPrs = (Button) findViewById(R.id.btnWrkPrs);
+        btnWrkPrs = (Button) findViewById(R.id.btnDefProd);
         btnManufProd = (Button) findViewById(R.id.btnManufProd);
         btnStorage = (Button) findViewById(R.id.btnStorage);
         btnManufProdCrt = (Button) findViewById(R.id.btnManufProdCrt);
