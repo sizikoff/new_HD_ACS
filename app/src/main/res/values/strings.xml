@@ -13,6 +13,26 @@
     <string name="txtManufProdCrt">Создать отчёт: Произведённая продукция</string>
     <string name="txtDefProdCrt">Создать отчёт: Забракованная продукция</string>
     <string name="txtStorageCrt">Создать отчёт: Склад</string>
+    <string name="txtHats">Головные уборы</string>
+    <string name="txtMerch">Аксессуары</string>
+
+    <string name="txtPanama">Панама</string>
+    <string name="txtHat">Шляпа</string>
+    <string name="txtVisor">Козырёк</string>
+    <string name="txtKartuz">Картуз</string>
+    <string name="txtCap">Кепка</string>
+    <string name="txtBeretFr">Французкий берет</string>
+    <string name="txtBeretVol">Объёмный берет</string>
+    <string name="txtBeretCz">Берет Чехия</string>
+    <string name="txtCapLinda">Кепка Линда</string>
+    <string name="txtUshanka">Ушанка</string>
+    <string name="txtJockeyka">Жокейка</string>
+    <string name="txtJockeykaFurr">Жокейка с мех. ушками</string>
+    <string name="txtEightblade">Восьмиклинка</string>
+    <string name="txtScarf">Шарф</string>
+    <string name="txtKerchief">Косынка</string>
+    <string name="txtShopper">Сумка шопер</string>
+
     <string name="edtTxtModelHint">Модель</string>
     <string name="edtTxtMaterialHint">Материал</string>
     <string name="edtTxtColorHint">Цвет</string>
@@ -41,8 +61,10 @@
     <string name="edtTxtDPAmountWP">Брак: 1</string>
     <string name="edtTxtMPAmountWP2">Произведено: 13</string>
     <string name="edtTxtDPAmountWP2">Брак: 3</string>
+
     <string name="txtNavLeft1">В даный момент эта шторка не предоставляет доступ к ресурсам по причине их отсутствия.</string>
     <string name="txtNavLeft2">Программа будет доробатыватся и данный элемент интерфейса будет доделан, как и ресурсы к которым он будет вести.</string>
+
     <string name="btnSelectPost">Выберите должность</string>
     <string name="btnSelectSeamstress">Швея</string>
     <string name="btnSelectTechnologist">Технолог</string>
@@ -56,12 +78,15 @@
     <string name="btnManufProdCrt">Создать отчёт по произведённой продукции</string>
     <string name="btnDefProdCrt">Создать отчёт по забракованной продукции</string>
     <string name="btnCrtReport">Создать отчёт</string>
+
     <string name="options">Опции</string>
     <string name="productivity">Продуктивность</string>
     <string name="hnt_login">Введите имя</string>
     <string name="hnt_password">Введите пароль</string>
     <string name="hnt_email">Введите ваш e-mail</string>
+
     <string name="imgbtnoptions">imgBtnOptions</string>
     <string name="imgbtnoprofile">imgbtnoprofile</string>
+
     <string name="none"> </string>
 </resources>
