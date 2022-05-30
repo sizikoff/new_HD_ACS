@@ -13,7 +13,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btnWrkPrs, btnManufProd, btnStorage, btnManufProdCrt, btnStorageCrt,btnDefProd ,btnDefProdCrt, ;
+    private Button btnWrkPrs, btnManufProd, btnStorage, btnManufProdCrt, btnStorageCrt,btnDefProd ,btnDefProdCrt, btnPanama, btnHat, btnVisor, btnKartuz, btnCap, btnBeretFr, btnBeretVol, btnBeretCz, btnCapLinda, btnUshanka, btnJockeyka, btnJockeykaFurr, btnEightblade;
     private ImageButton btnNavLeftOpener, btnNavRightOpener, btnNavLeftCloser, btnNavRightCloser, imgBtnOptions, imgBtnHome, imgBtnProfile, imgBtnHatsOpener, imgBtnMerchOpener;
     private FrameLayout navBarLeft, navBarRight, layHats, layMerch;
 
@@ -29,6 +29,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnStorageCrt = (Button) findViewById(R.id.btnStorageCrt);
         btnDefProd = (Button) findViewById(R.id.btnDefProd);
         btnDefProdCrt = (Button) findViewById(R.id.btnDefProdCrt);
+
+        btnPanama = (Button) findViewById(R.id.btnPanama);
+        btnHat = (Button) findViewById(R.id.btnHat);
+        btnVisor = (Button) findViewById(R.id.btnVisor);
+        btnKartuz = (Button) findViewById(R.id.btnKartuz);
+        btnCap = (Button) findViewById(R.id.btnCap);
+        btnBeretFr = (Button) findViewById(R.id.btnBeretFr);
+        btnBeretVol = (Button) findViewById(R.id.btnBeretVol);
+        btnBeretCz = (Button) findViewById(R.id.btnBeretCz);
+        btnCapLinda = (Button) findViewById(R.id.btnCapLinda);
+        btnUshanka = (Button) findViewById(R.id.btnUshanka);
+        btnJockeyka = (Button) findViewById(R.id.btnJockeyka);
+        btnJockeykaFurr = (Button) findViewById(R.id.btnJockeykaFurr);
+        btnEightblade = (Button) findViewById(R.id.btnEightblade);
 
         btnDefProdCrt = (Button) findViewById(R.id.btnDefProdCrt);
         btnDefProdCrt = (Button) findViewById(R.id.btnDefProdCrt);
@@ -57,6 +71,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnDefProd.setOnClickListener(this);
         btnDefProdCrt.setOnClickListener(this);
 
+        btnPanama.setOnClickListener(this);
+        btnHat.setOnClickListener(this);
+        btnVisor.setOnClickListener(this);
+        btnKartuz.setOnClickListener(this);
+        btnCap.setOnClickListener(this);
+        btnBeretFr.setOnClickListener(this);
+        btnBeretVol.setOnClickListener(this);
+        btnBeretCz.setOnClickListener(this);
+        btnCapLinda.setOnClickListener(this);
+        btnUshanka.setOnClickListener(this);
+        btnJockeyka.setOnClickListener(this);
+        btnJockeykaFurr.setOnClickListener(this);
+
         btnNavLeftOpener.setOnClickListener(this);
         btnNavRightOpener.setOnClickListener(this);
         btnNavLeftCloser.setOnClickListener(this);
@@ -74,6 +101,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.btnPanama:
+                Intent actP = new Intent(MainActivity.this, HatsPanamaActivity.class);
+                startActivity(actP);
+                finish();
+                break;
             case R.id.btnWrkPrs:
                 Intent actWPA = new Intent(MainActivity.this, WorkersProgressActivity.class);
                 startActivity(actWPA);

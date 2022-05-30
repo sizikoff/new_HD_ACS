@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 
 public class HatsPanamaActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button ;
+    private Button btnPanama, btnHat, btnVisor, btnKartuz, btnCap, btnBeretFr, btnBeretVol, btnBeretCz, btnCapLinda, btnUshanka, btnJockeyka, btnJockeykaFurr, btnEightblade;
     private ImageButton btnNavLeftOpener, btnNavLeftCloser, imgBtnOptions, imgBtnHome, imgBtnProfile, imgBtnHatsOpener, imgBtnMerchOpener;
     private FrameLayout navBarLeft, layHats, layMerch;
 
@@ -19,6 +19,20 @@ public class HatsPanamaActivity extends AppCompatActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hats_panama);
+
+        btnPanama = (Button) findViewById(R.id.btnPanama);
+        btnHat = (Button) findViewById(R.id.btnHat);
+        btnVisor = (Button) findViewById(R.id.btnVisor);
+        btnKartuz = (Button) findViewById(R.id.btnKartuz);
+        btnCap = (Button) findViewById(R.id.btnCap);
+        btnBeretFr = (Button) findViewById(R.id.btnBeretFr);
+        btnBeretVol = (Button) findViewById(R.id.btnBeretVol);
+        btnBeretCz = (Button) findViewById(R.id.btnBeretCz);
+        btnCapLinda = (Button) findViewById(R.id.btnCapLinda);
+        btnUshanka = (Button) findViewById(R.id.btnUshanka);
+        btnJockeyka = (Button) findViewById(R.id.btnJockeyka);
+        btnJockeykaFurr = (Button) findViewById(R.id.btnJockeykaFurr);
+        btnEightblade = (Button) findViewById(R.id.btnEightblade);
 
         btnNavLeftOpener = (ImageButton) findViewById(R.id.btnNavLeftOpener);
         btnNavLeftCloser = (ImageButton) findViewById(R.id.btnNavLeftCloser);
@@ -41,12 +55,29 @@ public class HatsPanamaActivity extends AppCompatActivity implements View.OnClic
 
         imgBtnHatsOpener.setOnClickListener(this);
         imgBtnMerchOpener.setOnClickListener(this);
+
+         btnPanama.setOnClickListener(this);
+         btnHat.setOnClickListener(this);
+         btnVisor.setOnClickListener(this);
+         btnKartuz.setOnClickListener(this);
+         btnCap.setOnClickListener(this);
+         btnBeretFr.setOnClickListener(this);
+         btnBeretVol.setOnClickListener(this);
+         btnBeretCz.setOnClickListener(this);
+         btnCapLinda.setOnClickListener(this);
+         btnUshanka.setOnClickListener(this);
+         btnJockeyka.setOnClickListener(this);
+         btnJockeykaFurr.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-
+            case R.id.btnPanama:
+                Intent actP = new Intent(HatsPanamaActivity.this, HatsPanamaActivity.class);
+                startActivity(actP);
+                finish();
+                break;
             case R.id.imgBtnHome:
                 Intent actHome = new Intent(HatsPanamaActivity.this, MainActivity.class);
                 startActivity(actHome);
@@ -54,17 +85,9 @@ public class HatsPanamaActivity extends AppCompatActivity implements View.OnClic
                 break;
             case R.id.btnNavLeftOpener:
                 navBarLeft.setVisibility(View.VISIBLE);
-                navBarRight.setVisibility(View.INVISIBLE);
-                break;
-            case R.id.btnNavRightOpener:
-                navBarRight.setVisibility(View.VISIBLE);
-                navBarLeft.setVisibility(View.INVISIBLE);
                 break;
             case R.id.btnNavLeftCloser:
                 navBarLeft.setVisibility(View.INVISIBLE);
-                break;
-            case R.id.btnNavRightCloser:
-                navBarRight.setVisibility(View.INVISIBLE);
                 break;
             case R.id.imgBtnHatsOpener:
                 if (layHats.getVisibility() == View.GONE){

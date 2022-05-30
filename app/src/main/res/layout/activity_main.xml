@@ -349,7 +349,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/dark_gray"
-            android:visibility="invisible">
+            android:visibility="visible">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -440,7 +440,7 @@
                                         android:id="@+id/layHats"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:visibility="gone">
+                                        android:visibility="visible">
 
                                         <LinearLayout
                                             android:layout_width="match_parent"
@@ -465,105 +465,105 @@
                                                     android:id="@+id/btnPanama"
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content"
-                                                    android:layout_marginTop="-5dp"
-                                                    android:layout_marginBottom="-5dp"
+                                                    android:layout_marginTop="-2dp"
+                                                    android:layout_marginBottom="-2dp"
                                                     android:background="@color/none"
                                                     android:fontFamily="@font/ubuntu_light"
                                                     android:gravity="fill"
                                                     android:text="@string/txtPanama"
                                                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="14sp" />
+                                                    android:textSize="16sp" />
 
                                                 <Button
-                                                    android:id="@+id/btmHat"
+                                                    android:id="@+id/btnHat"
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content"
-                                                    android:layout_marginTop="-5dp"
-                                                    android:layout_marginBottom="-5dp"
+                                                    android:layout_marginTop="-2dp"
+                                                    android:layout_marginBottom="-2dp"
                                                     android:background="@color/none"
                                                     android:fontFamily="@font/ubuntu_light"
                                                     android:gravity="fill"
                                                     android:text="@string/txtHat"
                                                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="14sp" />
+                                                    android:textSize="16sp" />
 
                                                 <Button
                                                     android:id="@+id/btnVisor"
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content"
-                                                    android:layout_marginTop="-5dp"
-                                                    android:layout_marginBottom="-5dp"
+                                                    android:layout_marginTop="-2dp"
+                                                    android:layout_marginBottom="-2dp"
                                                     android:background="@color/none"
                                                     android:fontFamily="@font/ubuntu_light"
                                                     android:gravity="fill"
                                                     android:text="@string/txtVisor"
                                                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="14sp" />
+                                                    android:textSize="16sp" />
 
                                                 <Button
                                                     android:id="@+id/btnKartuz"
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content"
-                                                    android:layout_marginTop="-5dp"
-                                                    android:layout_marginBottom="-5dp"
+                                                    android:layout_marginTop="-2dp"
+                                                    android:layout_marginBottom="-2dp"
                                                     android:background="@color/none"
                                                     android:fontFamily="@font/ubuntu_light"
                                                     android:gravity="fill"
                                                     android:text="@string/txtKartuz"
                                                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="14sp" />
+                                                    android:textSize="16sp" />
 
                                                 <Button
                                                     android:id="@+id/btnCap"
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content"
-                                                    android:layout_marginTop="-5dp"
-                                                    android:layout_marginBottom="-5dp"
+                                                    android:layout_marginTop="-2dp"
+                                                    android:layout_marginBottom="-2dp"
                                                     android:background="@color/none"
                                                     android:fontFamily="@font/ubuntu_light"
                                                     android:gravity="fill"
                                                     android:text="@string/txtCap"
                                                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="14sp" />
+                                                    android:textSize="16sp" />
 
                                                 <Button
                                                     android:id="@+id/btnBeretFr"
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content"
-                                                    android:layout_marginTop="-5dp"
-                                                    android:layout_marginBottom="-5dp"
+                                                    android:layout_marginTop="-2dp"
+                                                    android:layout_marginBottom="-2dp"
                                                     android:background="@color/none"
                                                     android:fontFamily="@font/ubuntu_light"
                                                     android:gravity="fill"
                                                     android:text="@string/txtBeretFr"
                                                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="14sp" />
+                                                    android:textSize="16sp" />
 
                                                 <Button
                                                     android:id="@+id/btnBeretVol"
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content"
-                                                    android:layout_marginTop="-5dp"
-                                                    android:layout_marginBottom="-5dp"
+                                                    android:layout_marginTop="-2dp"
+                                                    android:layout_marginBottom="-2dp"
                                                     android:background="@color/none"
                                                     android:fontFamily="@font/ubuntu_light"
                                                     android:gravity="fill"
                                                     android:text="@string/txtBeretVol"
                                                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="14sp" />
+                                                    android:textSize="16sp" />
 
                                                 <Button
                                                     android:id="@+id/btnBeretCz"
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content"
-                                                    android:layout_marginTop="-5dp"
-                                                    android:layout_marginBottom="-5dp"
+                                                    android:layout_marginTop="-2dp"
+                                                    android:layout_marginBottom="-2dp"
                                                     android:background="@color/none"
                                                     android:fontFamily="@font/ubuntu_light"
                                                     android:gravity="fill"
                                                     android:text="@string/txtBeretCz"
                                                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="14sp" />
+                                                    android:textSize="16sp" />
 
                                                 <Button
                                                     android:id="@+id/btnCapLinda"
@@ -576,7 +576,7 @@
                                                     android:gravity="fill"
                                                     android:text="@string/txtCapLinda"
                                                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="14sp" />
+                                                    android:textSize="16sp" />
 
                                                 <Button
                                                     android:id="@+id/btnUshanka"
@@ -589,7 +589,7 @@
                                                     android:gravity="fill"
                                                     android:text="@string/txtUshanka"
                                                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="14sp" />
+                                                    android:textSize="16sp" />
 
                                                 <Button
                                                     android:id="@+id/btnJockeyka"
@@ -602,7 +602,7 @@
                                                     android:gravity="fill"
                                                     android:text="@string/txtJockeyka"
                                                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="14sp" />
+                                                    android:textSize="16sp" />
 
                                                 <Button
                                                     android:id="@+id/btnJockeykaFurr"
@@ -615,7 +615,7 @@
                                                     android:gravity="fill"
                                                     android:text="@string/txtJockeykaFurr"
                                                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="14sp" />
+                                                    android:textSize="16sp" />
 
                                                 <Button
                                                     android:id="@+id/btnEightblade"
@@ -628,7 +628,7 @@
                                                     android:gravity="fill"
                                                     android:text="@string/txtEightblade"
                                                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="14sp" />
+                                                    android:textSize="16sp" />
 
                                                 <ImageButton
                                                     android:id="@+id/imgBtnHatsAdd"
