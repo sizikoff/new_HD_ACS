@@ -17,6 +17,7 @@
     <string name="txtMerch">Аксессуары</string>
 
     <string name="txtPanama">Панама</string>
+    <string name="txtPanamaCrt">Поузловая обработка головного убора - ПАНАМА</string>
     <string name="txtHat">Шляпа</string>
     <string name="txtVisor">Козырёк</string>
     <string name="txtKartuz">Картуз</string>
@@ -88,5 +89,5 @@
     <string name="imgbtnoptions">imgBtnOptions</string>
     <string name="imgbtnoprofile">imgbtnoprofile</string>
 
-    <string name="none"> </string>
+    <string name="none"></string>
 </resources>

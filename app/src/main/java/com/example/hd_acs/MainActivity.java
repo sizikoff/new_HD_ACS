@@ -9,11 +9,13 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btnWrkPrs, btnManufProd, btnStorage, btnManufProdCrt, btnStorageCrt,btnDefProd ,btnDefProdCrt;
-    private ImageButton btnNavLeftOpener, btnNavRightOpener, btnNavLeftCloser, btnNavRightCloser, imgBtnOptions, imgBtnHome, imgBtnProfile;
-    private FrameLayout navBarLeft, navBarRight;
+    private Button btnWrkPrs, btnManufProd, btnStorage, btnManufProdCrt, btnStorageCrt,btnDefProd ,btnDefProdCrt, ;
+    private ImageButton btnNavLeftOpener, btnNavRightOpener, btnNavLeftCloser, btnNavRightCloser, imgBtnOptions, imgBtnHome, imgBtnProfile, imgBtnHatsOpener, imgBtnMerchOpener;
+    private FrameLayout navBarLeft, navBarRight, layHats, layMerch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnDefProd = (Button) findViewById(R.id.btnDefProd);
         btnDefProdCrt = (Button) findViewById(R.id.btnDefProdCrt);
 
+        btnDefProdCrt = (Button) findViewById(R.id.btnDefProdCrt);
+        btnDefProdCrt = (Button) findViewById(R.id.btnDefProdCrt);
+        btnDefProdCrt = (Button) findViewById(R.id.btnDefProdCrt);
+
         btnNavLeftOpener = (ImageButton) findViewById(R.id.btnNavLeftOpener);
         btnNavRightOpener = (ImageButton) findViewById(R.id.btnNavRightOpener);
         btnNavLeftCloser = (ImageButton) findViewById(R.id.btnNavLeftCloser);
@@ -35,9 +41,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imgBtnOptions = (ImageButton) findViewById(R.id.imgBtnOptions);
         imgBtnHome = (ImageButton) findViewById(R.id.imgBtnHome);
         imgBtnProfile = (ImageButton) findViewById(R.id.imgBtnProfile);
+        imgBtnHatsOpener = (ImageButton) findViewById(R.id.imgBtnHatsOpener);
+        imgBtnMerchOpener = (ImageButton) findViewById(R.id.imgBtnMerchOpener);
 
         navBarLeft = (FrameLayout) findViewById(R.id.navBarLeft);
         navBarRight = (FrameLayout) findViewById(R.id.navBarRight);
+        layHats = (FrameLayout) findViewById(R.id.layHats);
+        layMerch = (FrameLayout) findViewById(R.id.layMerch);
 
         btnWrkPrs.setOnClickListener(this);
         btnManufProd.setOnClickListener(this);
@@ -55,6 +65,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imgBtnOptions.setOnClickListener(this);
         imgBtnHome.setOnClickListener(this);
         imgBtnProfile.setOnClickListener(this);
+
+        imgBtnHatsOpener.setOnClickListener(this);
+        imgBtnMerchOpener.setOnClickListener(this);
 
     }
 
@@ -114,6 +127,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnNavRightCloser:
                 navBarRight.setVisibility(View.INVISIBLE);
+                break;
+            case R.id.imgBtnHatsOpener:
+                if (layHats.getVisibility() == View.GONE){
+                    layHats.setVisibility(View.VISIBLE);
+                } else {
+                    layHats.setVisibility(View.GONE);
+                }
+                break;
+            case R.id.imgBtnMerchOpener:
+                if (layMerch.getVisibility() == View.GONE){
+                    layMerch.setVisibility(View.VISIBLE);
+                } else {
+                    layMerch.setVisibility(View.GONE);
+                }
                 break;
         }
     }
