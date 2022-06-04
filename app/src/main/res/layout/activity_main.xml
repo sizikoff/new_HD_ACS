@@ -294,7 +294,6 @@
                     android:layout_gravity="center"
                     android:background="@color/none"
                     android:contentDescription="@string/imgbtnoptions"
-                    android:onClick="onImgBtnOptions"
                     android:scaleType="centerCrop"
                     android:src="@drawable/options"
                     tools:ignore="TouchTargetSizeCheck" />
@@ -313,7 +312,6 @@
                         android:layout_height="35dp"
                         android:layout_gravity="center"
                         android:background="@color/none"
-                        android:onClick="onImgBtnHome"
                         android:scaleType="fitCenter"
                         app:srcCompat="@drawable/hdlogo"
                         tools:ignore="TouchTargetSizeCheck" />
@@ -327,7 +325,6 @@
                     android:layout_gravity="center"
                     android:background="@color/none"
                     android:contentDescription="@string/imgbtnoprofile"
-                    android:onClick="onImgBtnProfile"
                     android:scaleType="fitCenter"
                     android:src="@drawable/profile"
                     tools:ignore="TouchTargetSizeCheck" />
@@ -341,6 +338,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:baselineAligned="false"
         android:orientation="horizontal">
 
         <FrameLayout
@@ -461,180 +459,20 @@
                                                 android:layout_weight="1"
                                                 android:orientation="vertical">
 
-                                                <Button
-                                                    android:id="@+id/btnPanama"
+                                                <androidx.recyclerview.widget.RecyclerView
+                                                    android:id="@+id/recicler"
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content"
-                                                    android:layout_marginTop="-2dp"
-                                                    android:layout_marginBottom="-2dp"
-                                                    android:background="@color/none"
-                                                    android:fontFamily="@font/ubuntu_light"
-                                                    android:gravity="fill"
-                                                    android:text="@string/txtPanama"
-                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="16sp" />
-
-                                                <Button
-                                                    android:id="@+id/btnHat"
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_marginTop="-2dp"
-                                                    android:layout_marginBottom="-2dp"
-                                                    android:background="@color/none"
-                                                    android:fontFamily="@font/ubuntu_light"
-                                                    android:gravity="fill"
-                                                    android:text="@string/txtHat"
-                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="16sp" />
-
-                                                <Button
-                                                    android:id="@+id/btnVisor"
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_marginTop="-2dp"
-                                                    android:layout_marginBottom="-2dp"
-                                                    android:background="@color/none"
-                                                    android:fontFamily="@font/ubuntu_light"
-                                                    android:gravity="fill"
-                                                    android:text="@string/txtVisor"
-                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="16sp" />
-
-                                                <Button
-                                                    android:id="@+id/btnKartuz"
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_marginTop="-2dp"
-                                                    android:layout_marginBottom="-2dp"
-                                                    android:background="@color/none"
-                                                    android:fontFamily="@font/ubuntu_light"
-                                                    android:gravity="fill"
-                                                    android:text="@string/txtKartuz"
-                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="16sp" />
-
-                                                <Button
-                                                    android:id="@+id/btnCap"
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_marginTop="-2dp"
-                                                    android:layout_marginBottom="-2dp"
-                                                    android:background="@color/none"
-                                                    android:fontFamily="@font/ubuntu_light"
-                                                    android:gravity="fill"
-                                                    android:text="@string/txtCap"
-                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="16sp" />
-
-                                                <Button
-                                                    android:id="@+id/btnBeretFr"
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_marginTop="-2dp"
-                                                    android:layout_marginBottom="-2dp"
-                                                    android:background="@color/none"
-                                                    android:fontFamily="@font/ubuntu_light"
-                                                    android:gravity="fill"
-                                                    android:text="@string/txtBeretFr"
-                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="16sp" />
-
-                                                <Button
-                                                    android:id="@+id/btnBeretVol"
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_marginTop="-2dp"
-                                                    android:layout_marginBottom="-2dp"
-                                                    android:background="@color/none"
-                                                    android:fontFamily="@font/ubuntu_light"
-                                                    android:gravity="fill"
-                                                    android:text="@string/txtBeretVol"
-                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="16sp" />
-
-                                                <Button
-                                                    android:id="@+id/btnBeretCz"
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_marginTop="-2dp"
-                                                    android:layout_marginBottom="-2dp"
-                                                    android:background="@color/none"
-                                                    android:fontFamily="@font/ubuntu_light"
-                                                    android:gravity="fill"
-                                                    android:text="@string/txtBeretCz"
-                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="16sp" />
-
-                                                <Button
-                                                    android:id="@+id/btnCapLinda"
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_marginTop="-5dp"
-                                                    android:layout_marginBottom="-5dp"
-                                                    android:background="@color/none"
-                                                    android:fontFamily="@font/ubuntu_light"
-                                                    android:gravity="fill"
-                                                    android:text="@string/txtCapLinda"
-                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="16sp" />
-
-                                                <Button
-                                                    android:id="@+id/btnUshanka"
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_marginTop="-5dp"
-                                                    android:layout_marginBottom="-5dp"
-                                                    android:background="@color/none"
-                                                    android:fontFamily="@font/ubuntu_light"
-                                                    android:gravity="fill"
-                                                    android:text="@string/txtUshanka"
-                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="16sp" />
-
-                                                <Button
-                                                    android:id="@+id/btnJockeyka"
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_marginTop="-5dp"
-                                                    android:layout_marginBottom="-5dp"
-                                                    android:background="@color/none"
-                                                    android:fontFamily="@font/ubuntu_light"
-                                                    android:gravity="fill"
-                                                    android:text="@string/txtJockeyka"
-                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="16sp" />
-
-                                                <Button
-                                                    android:id="@+id/btnJockeykaFurr"
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_marginTop="-5dp"
-                                                    android:layout_marginBottom="-5dp"
-                                                    android:background="@color/none"
-                                                    android:fontFamily="@font/ubuntu_light"
-                                                    android:gravity="fill"
-                                                    android:text="@string/txtJockeykaFurr"
-                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="16sp" />
-
-                                                <Button
-                                                    android:id="@+id/btnEightblade"
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_marginTop="-5dp"
-                                                    android:layout_marginBottom="-5dp"
-                                                    android:background="@color/none"
-                                                    android:fontFamily="@font/ubuntu_light"
-                                                    android:gravity="fill"
-                                                    android:text="@string/txtEightblade"
-                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                    android:textSize="16sp" />
+                                                    android:layout_gravity="center"
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_marginBottom="10dp"/>
 
                                                 <ImageButton
                                                     android:id="@+id/imgBtnHatsAdd"
                                                     android:layout_width="30dp"
                                                     android:layout_height="30dp"
                                                     android:layout_gravity="center"
+                                                    android:layout_marginBottom="10dp"
                                                     android:background="@color/none"
                                                     android:fontFamily="@font/ubuntu_medium"
                                                     android:scaleType="fitCenter"
