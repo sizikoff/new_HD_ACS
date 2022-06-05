@@ -90,4 +90,13 @@
     <string name="imgbtnoprofile">imgbtnoprofile</string>
 
     <string name="none"></string>
+
+
+
+
+
+<!--    Новый список строк-->
+    <string name="snos_uspevaemosti">\n20.02.2022 17:40\n\nСотрудник:Елена\n\nПроизведено:15\n\nБрак:1\n</string>
+    <string name="snos_uspevaemosti2">\n20.02.2022 17:15\n\nСотрудник:Анжела\n\nПроизведено:13\n\nБрак:3\n</string>
+
 </resources>

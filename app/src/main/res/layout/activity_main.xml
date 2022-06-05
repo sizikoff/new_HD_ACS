@@ -94,154 +94,30 @@
                                 android:layout_weight="1"
                                 android:fillViewport="true">
 
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_weight="1"
                                         android:orientation="vertical">
 
-                                        <LinearLayout
-                                            android:layout_width="match_parent"
+                                        <TextView
+                                            android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:orientation="vertical">
+                                            android:fontFamily="@font/ubuntu_light"
+                                            android:gravity="center"
+                                            android:text="@string/snos_uspevaemosti"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                            android:textSize="20sp" />
 
-                                            <TextView
-                                                android:id="@+id/textView8"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginTop="5dp"
-                                                android:layout_marginBottom="5dp"
-                                                android:fontFamily="@font/ubuntu_light"
-                                                android:gravity="center"
-                                                android:text="@string/edtTxtDateMP"
-                                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                android:textSize="20sp" />
-
-                                            <TextView
-                                                android:id="@+id/textView12"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginTop="5dp"
-                                                android:layout_marginBottom="5dp"
-                                                android:fontFamily="@font/ubuntu_light"
-                                                android:gravity="center"
-                                                android:text="@string/edtTxtWorkerMP"
-                                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                android:textSize="20sp" />
-
-                                            <TextView
-                                                android:id="@+id/textView13"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginTop="5dp"
-                                                android:layout_marginBottom="5dp"
-                                                android:fontFamily="@font/ubuntu_light"
-                                                android:gravity="center"
-                                                android:text="@string/edtTxtMPAmountWP"
-                                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                android:textSize="20sp" />
-
-                                            <TextView
-                                                android:id="@+id/textView3"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginTop="5dp"
-                                                android:layout_marginBottom="15dp"
-                                                android:fontFamily="@font/ubuntu_light"
-                                                android:gravity="center"
-                                                android:text="@string/edtTxtDPAmountWP"
-                                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                android:textSize="20sp" />
-
-                                            <TextView
-                                                android:id="@+id/textView20"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginTop="5dp"
-                                                android:layout_marginBottom="15dp"
-                                                android:fontFamily="@font/ubuntu_light"
-                                                android:gravity="center"
-                                                android:text="@string/none"
-                                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                android:textSize="20sp"
-                                                android:visibility="invisible" />
-
-                                        </LinearLayout>
-
-                                        <LinearLayout
-                                            android:layout_width="match_parent"
+                                        <TextView
+                                            android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:orientation="vertical">
+                                            android:fontFamily="@font/ubuntu_light"
+                                            android:gravity="center"
+                                            android:text="@string/snos_uspevaemosti2"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                            android:textSize="20sp" />
 
-                                            <TextView
-                                                android:id="@+id/textView14"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginTop="5dp"
-                                                android:layout_marginBottom="5dp"
-                                                android:fontFamily="@font/ubuntu_light"
-                                                android:gravity="center"
-                                                android:text="@string/edtTxtDateMP2"
-                                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                android:textSize="20sp" />
-
-                                            <TextView
-                                                android:id="@+id/textView18"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginTop="5dp"
-                                                android:layout_marginBottom="5dp"
-                                                android:fontFamily="@font/ubuntu_light"
-                                                android:gravity="center"
-                                                android:text="@string/edtTxtWorkerMP2"
-                                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                android:textSize="20sp" />
-
-                                            <TextView
-                                                android:id="@+id/textView19"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginTop="5dp"
-                                                android:layout_marginBottom="5dp"
-                                                android:fontFamily="@font/ubuntu_light"
-                                                android:gravity="center"
-                                                android:text="@string/edtTxtMPAmountWP2"
-                                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                android:textSize="20sp" />
-
-                                            <TextView
-                                                android:id="@+id/textView2"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginTop="5dp"
-                                                android:layout_marginBottom="15dp"
-                                                android:fontFamily="@font/ubuntu_light"
-                                                android:gravity="center"
-                                                android:text="@string/edtTxtDPAmountWP2"
-                                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                android:textSize="20sp" />
-
-                                            <TextView
-                                                android:id="@+id/textView21"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginTop="5dp"
-                                                android:layout_marginBottom="15dp"
-                                                android:fontFamily="@font/ubuntu_light"
-                                                android:gravity="center"
-                                                android:text="@string/none"
-                                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                                                android:textSize="20sp"
-                                                android:visibility="invisible" />
-
-                                        </LinearLayout>
-
-                                    </LinearLayout>
 
                                 </LinearLayout>
                             </androidx.core.widget.NestedScrollView>
