@@ -11,13 +11,13 @@
     <ScrollView
         android:id="@+id/left_menu"
         android:layout_width="300dp"
-        android:visibility="gone"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="gone">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/light_gray"
+            android:background="@color/dark_gray"
             android:orientation="vertical">
 
             <LinearLayout
@@ -100,12 +100,12 @@
 
         <ImageButton
             android:id="@+id/menu_lock_but"
-            android:visibility="gone"
             android:layout_width="20dp"
             android:layout_height="wrap_content"
             android:background="@color/none"
             android:scaleType="fitCenter"
-            android:src="@drawable/arrow" />
+            android:src="@drawable/arrow"
+            android:visibility="gone" />
 
 
         <ScrollView

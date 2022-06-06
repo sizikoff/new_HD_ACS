@@ -105,7 +105,7 @@ public class RegisterActivity extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
-                                startActivity(new Intent(RegisterActivity.this, MainActivity.class));
+                                startActivity(new Intent(RegisterActivity.this, MainActivity2.class));
                                 finish();
                             }
                         }).addOnFailureListener(new OnFailureListener() {
