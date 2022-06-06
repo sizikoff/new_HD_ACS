@@ -8,85 +8,91 @@
     android:orientation="horizontal"
     tools:context=".MainActivity2">
 
-    <ScrollView
-        android:id="@+id/left_menu"
-        android:layout_width="300dp"
+    <LinearLayout
+        android:id="@+id/layLeft_menu"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="horizontal"
         android:visibility="gone">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ScrollView
+            android:id="@+id/left_menu"
+            android:layout_width="300dp"
             android:layout_height="match_parent"
-            android:background="@color/dark_gray"
-            android:orientation="vertical">
+            android:layout_weight="10"
+            android:background="@color/dark_gray">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:orientation="horizontal">
+                android:layout_height="match_parent"
+                android:background="@color/dark_gray"
+                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/txtHats"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtHats"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:gravity="center"
+                        android:text="@string/txtHats"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recicler"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_weight="2"
-                    android:fontFamily="@font/ubuntu_bold"
-                    android:gravity="center"
-                    android:text="@string/txtHats"
-                    android:textSize="20sp" />
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <ImageButton
+                    android:id="@+id/imgBtnHatsAdd"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/none"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/plus" />
 
             </LinearLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recicler"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp" />
+        </ScrollView>
 
-            <ImageButton
-                android:id="@+id/imgBtnHatsAdd"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
-                android:background="@color/none"
-                android:fontFamily="@font/ubuntu_medium"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/plus" />
+        <ImageButton
+            android:id="@+id/menu_lock_but"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@color/none"
+            android:scaleType="fitCenter"
+            android:src="@drawable/arrow" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_weight="2"
-                    android:fontFamily="@font/ubuntu_bold"
-                    android:gravity="center"
-                    android:text="@string/txtMerch"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </ScrollView>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
+        android:layout_weight="6"
         android:orientation="horizontal">
 
         <ImageButton
@@ -98,23 +104,15 @@
             android:scaleType="fitCenter"
             android:src="@drawable/arrow" />
 
-        <ImageButton
-            android:id="@+id/menu_lock_but"
-            android:layout_width="20dp"
-            android:layout_height="wrap_content"
-            android:background="@color/none"
-            android:scaleType="fitCenter"
-            android:src="@drawable/arrow"
-            android:visibility="gone" />
-
 
         <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"></ScrollView>
+
         <LinearLayout
             android:id="@+id/osn_info"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginStart="50dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="50dp"
@@ -125,6 +123,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_weight="1"
                 android:background="@drawable/fileds"
                 android:paddingLeft="15dp"
                 android:paddingTop="5dp"
@@ -143,25 +142,98 @@
 
             </FrameLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <ScrollView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:fontFamily="@font/ubuntu_light"
-                android:gravity="center"
-                android:text="@string/snos_uspevaemosti"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="20sp" />
+                android:layout_weight="10">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/ubuntu_light"
-                android:gravity="center"
-                android:text="@string/snos_uspevaemosti"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="20sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/ubuntu_light"
+                        android:gravity="center"
+                        android:text="@string/snos_uspevaemosti"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_light"
+                        android:gravity="center"
+                        android:text="@string/snos_uspevaemosti"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </ScrollView>
+
+            <FrameLayout
+                android:id="@+id/frmBtmMenu"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/fileds">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imgBtnOptions"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@color/none"
+                        android:contentDescription="@string/imgbtnoptions"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/options"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/fileds"
+                        android:padding="10dp">
+
+                        <ImageButton
+                            android:id="@+id/imgBtnHome"
+                            android:layout_width="70dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:background="@color/none"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/hdlogo"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                    </FrameLayout>
+
+                    <ImageButton
+                        android:id="@+id/imgBtnProfile"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@color/none"
+                        android:contentDescription="@string/imgbtnoprofile"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/profile"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </LinearLayout>
+
+            </FrameLayout>
 
         </LinearLayout>
 
@@ -174,5 +246,166 @@
             android:src="@drawable/arrow" />
 
     </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/navBarRight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:background="@color/none"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnNavRightCloser"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@color/none"
+                android:fontFamily="@font/ubuntu_medium"
+                android:rotationY="180"
+                android:scaleType="fitCenter"
+                android:src="@drawable/arrow"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/dark_gray"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtNavRightHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center"
+                    android:text="@string/txtNavRightHeader"
+                    android:textSize="25sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="4">
+
+                </FrameLayout>
+
+                <Button
+                    android:id="@+id/btnWrkPrs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/none"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/btnWrkPrs"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnManufProd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/none"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/btnManufProd"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnDefProd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/none"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/btnDefProd"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnStorage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/none"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/btnStorage"
+                    android:textSize="15sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="3">
+
+                </FrameLayout>
+
+                <Button
+                    android:id="@+id/btnManufProdCrt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/none"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/btnManufProdCrt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnDefProdCrt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/none"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/btnDefProdCrt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnStorageCrt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/none"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/btnStorageCrt"
+                    android:textSize="15sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
 
 </LinearLayout>

@@ -6,9 +6,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -16,19 +19,21 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity2 extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity implements View.OnClickListener {
 
     private RecyclerView recyclerView;
     private ArrayList<Data> arrayList;
-    private ImageButton imgBtnHatsAdd, imgBtnMerchOpener, menu_lock_but, btnNavRightOpener;
+    private ImageButton imgBtnHatsAdd, imgBtnMerchOpener, menu_lock_but, btnNavRightOpener, btnNavRightCloser, imgBtnHome;
+    private Button btnWrkPrs, btnManufProd, btnStorage, btnManufProdCrt, btnStorageCrt,btnDefProd ,btnDefProdCrt;
     private RecyclerAdapter recyclerAdapter;
-    private LinearLayout osn_info;
-    private ScrollView left_menu;
+    private LinearLayout osn_info, layLeft_menu;
+    private FrameLayout navBarRight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
         arrayList = new ArrayList<>();
 
         arrayList.add(new Data("Панама"));
@@ -45,24 +50,42 @@ public class MainActivity2 extends AppCompatActivity {
         arrayList.add(new Data("Жокейка с мех. ушами"));
         arrayList.add(new Data("Восьмиклинка"));
 
+        btnWrkPrs = (Button) findViewById(R.id.btnWrkPrs);
+        btnManufProd = (Button) findViewById(R.id.btnManufProd);
+        btnStorage = (Button) findViewById(R.id.btnStorage);
+        btnManufProdCrt = (Button) findViewById(R.id.btnManufProdCrt);
+        btnStorageCrt = (Button) findViewById(R.id.btnStorageCrt);
+        btnDefProd = (Button) findViewById(R.id.btnDefProd);
+        btnDefProdCrt = (Button) findViewById(R.id.btnDefProdCrt);
+
         imgBtnHatsAdd = findViewById(R.id.imgBtnHatsAdd);
         menu_lock_but = findViewById(R.id.menu_lock_but);
+        btnNavRightCloser = findViewById(R.id.btnNavRightCloser);
         btnNavRightOpener = findViewById(R.id.btnNavRightOpener);
+        imgBtnHome = findViewById(R.id.imgBtnHome);
         osn_info = findViewById(R.id.osn_info);
-        left_menu = findViewById(R.id.left_menu);
+        layLeft_menu = findViewById(R.id.layLeft_menu);
+        navBarRight = findViewById(R.id.navBarRight);
         imgBtnMerchOpener = findViewById(R.id.imgBtnMerchOpener);
+        recyclerAdapter = new RecyclerAdapter(this, arrayList);
         recyclerView = findViewById(R.id.recicler);
-        recyclerAdapter = new RecyclerAdapter(arrayList);
         recyclerView.setAdapter(recyclerAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager((this)));
+
+        btnWrkPrs.setOnClickListener(this);
+        btnManufProd.setOnClickListener(this);
+        btnStorage.setOnClickListener(this);
+        btnManufProdCrt.setOnClickListener(this);
+        btnStorageCrt.setOnClickListener(this);
+        btnDefProd.setOnClickListener(this);
+        btnDefProdCrt.setOnClickListener(this);
 
         menu_lock_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                left_menu.setVisibility(View.GONE);
+                layLeft_menu.setVisibility(View.GONE);
                 btnNavRightOpener.setVisibility(View.VISIBLE);
                 osn_info.setVisibility(View.VISIBLE);
-                menu_lock_but.setVisibility(View.GONE);
                 imgBtnMerchOpener.setVisibility(View.VISIBLE);
             }
         });
@@ -70,11 +93,35 @@ public class MainActivity2 extends AppCompatActivity {
         imgBtnMerchOpener.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                left_menu.setVisibility(View.VISIBLE);
+                layLeft_menu.setVisibility(View.VISIBLE);
                 btnNavRightOpener.setVisibility(View.GONE);
                 osn_info.setVisibility(View.GONE);
-                menu_lock_but.setVisibility(View.VISIBLE);
                 imgBtnMerchOpener.setVisibility(View.GONE);
+            }
+        });
+        btnNavRightOpener.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                navBarRight.setVisibility(View.VISIBLE);
+                btnNavRightOpener.setVisibility(View.GONE);
+                osn_info.setVisibility(View.GONE);
+                imgBtnMerchOpener.setVisibility(View.GONE);
+            }
+        });
+        btnNavRightCloser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navBarRight.setVisibility(View.GONE);
+                btnNavRightOpener.setVisibility(View.VISIBLE);
+                osn_info.setVisibility(View.VISIBLE);
+                imgBtnMerchOpener.setVisibility(View.VISIBLE);
+            }
+        });
+        imgBtnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent BH = new Intent(MainActivity2.this, MainActivity2.class);
+                startActivity(BH);
             }
         });
 
@@ -91,7 +138,7 @@ public class MainActivity2 extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         String value = input.getText().toString();
                         arrayList.add(new Data(value));
-                        recyclerAdapter = new RecyclerAdapter(arrayList);
+                        recyclerAdapter = new RecyclerAdapter(MainActivity2.this, arrayList);
                         recyclerView.setAdapter(recyclerAdapter);
                         Toast.makeText(MainActivity2.this, value + " добавлен(а) в список", Toast.LENGTH_SHORT).show();
                     }
@@ -106,5 +153,51 @@ public class MainActivity2 extends AppCompatActivity {
                 alert.show();
             }
         });
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btnWrkPrs:
+                Intent actWPA = new Intent(MainActivity2.this, WorkersProgressActivity.class);
+                startActivity(actWPA);
+                finish();
+                break;
+            case R.id.btnManufProd:
+                Intent actMPA = new Intent(MainActivity2.this, ManufacturedProductsActivity.class);
+                startActivity(actMPA);
+                finish();
+                break;
+            case R.id.btnStorage:
+                Intent actSA = new Intent(MainActivity2.this, StorageActivity.class);
+                startActivity(actSA);
+                finish();
+                break;
+            case R.id.btnManufProdCrt:
+                Intent actMPCA = new Intent(MainActivity2.this, ManufacturedProductsCreateActivity.class);
+                startActivity(actMPCA);
+                finish();
+                break;
+            case R.id.btnStorageCrt:
+                Intent actSCA = new Intent(MainActivity2.this, StorageCreateActivity.class);
+                startActivity(actSCA);
+                finish();
+                break;
+            case R.id.btnDefProd:
+                Intent actDPA = new Intent(MainActivity2.this, DefectProductsActivity.class);
+                startActivity(actDPA);
+                finish();
+                break;
+            case R.id.btnDefProdCrt:
+                Intent actDPCA = new Intent(MainActivity2.this, DefectProductsCreateActivity.class);
+                startActivity(actDPCA);
+                finish();
+                break;
+            case R.id.imgBtnHome:
+                Intent actHome = new Intent(MainActivity2.this, MainActivity.class);
+                startActivity(actHome);
+                finish();
+                break;
+        }
     }
 }

@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         imgBtnHatsAdd = findViewById(R.id.imgBtnHatsAdd);
         recyclerView = findViewById(R.id.recicler);
-        recyclerAdapter = new RecyclerAdapter(arrayList);
+        recyclerAdapter = new RecyclerAdapter(this, arrayList);
         recyclerView.setAdapter(recyclerAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager((this)));
 
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         String value = input.getText().toString();
                         arrayList.add(new Data(value));
-                        recyclerAdapter = new RecyclerAdapter(arrayList);
+                        recyclerAdapter = new RecyclerAdapter(MainActivity.this, arrayList);
                         recyclerView.setAdapter(recyclerAdapter);
                         Toast.makeText(MainActivity.this, value + " добавлен(а) в список", Toast.LENGTH_SHORT).show();
                     }

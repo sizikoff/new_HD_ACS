@@ -215,7 +215,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:baselineAligned="false"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <FrameLayout
             android:id="@+id/navBarLeft"
@@ -341,7 +342,7 @@
                                                     android:layout_height="wrap_content"
                                                     android:layout_gravity="center"
                                                     android:layout_marginTop="10dp"
-                                                    android:layout_marginBottom="10dp"/>
+                                                    android:layout_marginBottom="10dp" />
 
                                                 <ImageButton
                                                     android:id="@+id/imgBtnHatsAdd"
