@@ -91,7 +91,7 @@ public class StorageCreateActivity extends AppCompatActivity implements View.OnC
                 finish();
                 break;
             case R.id.imgBtnHome:
-                Intent actHome = new Intent(StorageCreateActivity.this, MainActivity.class);
+                Intent actHome = new Intent(StorageCreateActivity.this, MainActivity2.class);
                 startActivity(actHome);
                 finish();
                 break;

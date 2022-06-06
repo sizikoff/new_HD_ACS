@@ -91,7 +91,7 @@ public class DefectProductsCreateActivity extends AppCompatActivity implements V
                 finish();
                 break;
             case R.id.imgBtnHome:
-                Intent actHome = new Intent(DefectProductsCreateActivity.this, MainActivity.class);
+                Intent actHome = new Intent(DefectProductsCreateActivity.this, MainActivity2.class);
                 startActivity(actHome);
                 finish();
                 break;

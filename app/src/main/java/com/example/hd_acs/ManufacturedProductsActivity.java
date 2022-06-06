@@ -91,7 +91,7 @@ public class ManufacturedProductsActivity extends AppCompatActivity implements V
                 finish();
                 break;
             case R.id.imgBtnHome:
-                Intent actHome = new Intent(ManufacturedProductsActivity.this, MainActivity.class);
+                Intent actHome = new Intent(ManufacturedProductsActivity.this, MainActivity2.class);
                 startActivity(actHome);
                 finish();
                 break;

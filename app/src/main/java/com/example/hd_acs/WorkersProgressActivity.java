@@ -91,7 +91,7 @@ public class WorkersProgressActivity extends AppCompatActivity implements View.O
                 finish();
                 break;
             case R.id.imgBtnHome:
-                Intent actHome = new Intent(WorkersProgressActivity.this, MainActivity.class);
+                Intent actHome = new Intent(WorkersProgressActivity.this, MainActivity2.class);
                 startActivity(actHome);
                 finish();
                 break;

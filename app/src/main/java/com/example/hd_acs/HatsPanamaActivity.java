@@ -79,7 +79,7 @@ public class HatsPanamaActivity extends AppCompatActivity implements View.OnClic
                 finish();
                 break;
             case R.id.imgBtnHome:
-                Intent actHome = new Intent(HatsPanamaActivity.this, MainActivity.class);
+                Intent actHome = new Intent(HatsPanamaActivity.this, MainActivity2.class);
                 startActivity(actHome);
                 finish();
                 break;

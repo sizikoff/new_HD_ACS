@@ -91,7 +91,7 @@ public class StorageActivity extends AppCompatActivity implements View.OnClickLi
                 finish();
                 break;
             case R.id.imgBtnHome:
-                Intent actHome = new Intent(StorageActivity.this, MainActivity.class);
+                Intent actHome = new Intent(StorageActivity.this, MainActivity2.class);
                 startActivity(actHome);
                 finish();
                 break;

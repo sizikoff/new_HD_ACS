@@ -118,7 +118,7 @@ public class ManufacturedProductsCreateActivity extends AppCompatActivity implem
                 navBarLeft.setVisibility(View.INVISIBLE);
                 break;
             case R.id.imgBtnHome:
-                Intent homeBtn = new Intent(ManufacturedProductsCreateActivity.this, MainActivity.class);
+                Intent homeBtn = new Intent(ManufacturedProductsCreateActivity.this, MainActivity2.class);
                 startActivity(homeBtn);
                 finish();
                 break;
