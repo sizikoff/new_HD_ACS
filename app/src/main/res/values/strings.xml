@@ -63,9 +63,6 @@
     <string name="edtTxtMPAmountWP2">Произведено: 13</string>
     <string name="edtTxtDPAmountWP2">Брак: 3</string>
 
-    <string name="txtNavLeft1">В даный момент эта шторка не предоставляет доступ к ресурсам по причине их отсутствия.</string>
-    <string name="txtNavLeft2">Программа будет доробатыватся и данный элемент интерфейса будет доделан, как и ресурсы к которым он будет вести.</string>
-
     <string name="btnSelectPost">Выберите должность</string>
     <string name="btnSelectSeamstress">Швея</string>
     <string name="btnSelectTechnologist">Технолог</string>
