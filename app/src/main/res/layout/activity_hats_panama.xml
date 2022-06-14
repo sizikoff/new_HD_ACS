@@ -107,7 +107,7 @@
                                         android:layout_marginBottom="5dp"
                                         android:fontFamily="@font/ubuntu_medium"
                                         android:gravity="fill"
-                                        android:text="Поузловая обработка головного убора - ПАНАМА."
+                                        android:text="  Поузловая обработка головного убора - ПАНАМА."
                                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                                         android:textSize="15sp" />
 
@@ -119,7 +119,7 @@
                                         android:layout_marginBottom="5dp"
                                         android:fontFamily="@font/ubuntu_light"
                                         android:gravity="fill"
-                                        android:text="Панама состоит из следующих деталей основной ткани: донышко-1д.,тульи-2д.,поля-4д."
+                                        android:text="  Панама состоит из следующих деталей основной ткани: донышко-1д.,тульи-2д.,поля-4д."
                                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                                         android:textSize="15sp" />
 
@@ -131,7 +131,7 @@
                                         android:layout_marginBottom="5dp"
                                         android:fontFamily="@font/ubuntu_light"
                                         android:gravity="fill"
-                                        android:text="И из деталей подкладочной ткани:донышко-1д., тульи-2д."
+                                        android:text="  И из деталей подкладочной ткани:донышко-1д., тульи-2д."
                                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                                         android:textSize="15sp" />
 
@@ -143,7 +143,7 @@
                                         android:layout_marginBottom="5dp"
                                         android:fontFamily="@font/ubuntu_light"
                                         android:gravity="fill"
-                                        android:text="Все швы стачивания и притачивания 0,7 см."
+                                        android:text="  Все швы стачивания и притачивания 0,7 см."
                                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                                         android:textSize="15sp" />
 
@@ -164,7 +164,7 @@
                                         android:layout_marginBottom="5dp"
                                         android:fontFamily="@font/ubuntu_light"
                                         android:gravity="fill"
-                                        android:text="Обработка начинается с заготовки спинки. На одну деталь тульи настрачивают кулиску, в которую вставляют резинку 42см длиной."
+                                        android:text="  Обработка начинается с заготовки спинки. На одну деталь тульи настрачивают кулиску, в которую вставляют резинку 42см длиной."
                                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                                         android:textSize="15sp" />
 
@@ -176,7 +176,7 @@
                                         android:layout_marginBottom="5dp"
                                         android:fontFamily="@font/ubuntu_light"
                                         android:gravity="fill"
-                                        android:text="Затем стачивают тульи между собой, с лицевой стороны прокладывают отделочную строчку со стороны спинки на расстоянии от шва 0,1-0,2см."
+                                        android:text="  Затем стачивают тульи между собой, с лицевой стороны прокладывают отделочную строчку со стороны спинки на расстоянии от шва 0,1-0,2см."
                                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                                         android:textSize="15sp" />
 
@@ -188,7 +188,7 @@
                                         android:layout_marginBottom="5dp"
                                         android:fontFamily="@font/ubuntu_light"
                                         android:gravity="fill"
-                                        android:text="Донышко делят на 4 части, на тульях находят середины. Притачивают донышко к тульям со стороны тульев, совмещая намеченные линии."
+                                        android:text="  Донышко делят на 4 части, на тульях находят середины. Притачивают донышко к тульям со стороны тульев, совмещая намеченные линии."
                                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                                         android:textSize="15sp" />
 
@@ -200,7 +200,7 @@
                                         android:layout_marginBottom="5dp"
                                         android:fontFamily="@font/ubuntu_light"
                                         android:gravity="fill"
-                                        android:text="По лицевой стороне делают отделочную строчку со стороны тульев на расстоянии 0,1-0,2см от шва притачивания. Утюжат заготовку на колодке."
+                                        android:text="  По лицевой стороне делают отделочную строчку со стороны тульев на расстоянии 0,1-0,2см от шва притачивания. Утюжат заготовку на колодке."
                                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                                         android:textSize="15sp" />
 
@@ -212,7 +212,7 @@
                                         android:layout_marginBottom="5dp"
                                         android:fontFamily="@font/ubuntu_light"
                                         android:gravity="fill"
-                                        android:text="Поля стачивают между собой по коротким сторонам. Утюжат."
+                                        android:text="  Поля стачивают между собой по коротким сторонам. Утюжат."
                                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                                         android:textSize="15sp" />
 
@@ -224,7 +224,7 @@
                                         android:layout_marginBottom="5dp"
                                         android:fontFamily="@font/ubuntu_light"
                                         android:gravity="fill"
-                                        android:text="Совмещая швы друг с другом стачивают поля. Выворачивают на лицо и прокладывают отделочную строчку на расстоянии 0,7 см от края. Затем делают сверху деталей закрепляющую строчку. Поля притачивают к заготовке со стороны
+                                        android:text="  Совмещая швы друг с другом стачивают поля. Выворачивают на лицо и прокладывают отделочную строчку на расстоянии 0,7 см от края. Затем делают сверху деталей закрепляющую строчку. Поля притачивают к заготовке со стороны
 тульев, совмещая швы."
                                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                                         android:textSize="15sp" />
@@ -237,7 +237,7 @@
                                         android:layout_marginBottom="5dp"
                                         android:fontFamily="@font/ubuntu_light"
                                         android:gravity="fill"
-                                        android:text="Подкладка: Стачивают детали спинки, оставляя дырочку на расстоянии 1,5см снизу. Стачивают тулья между собой. Притачивают донышко, оставляя дырочку размером 5-6см для выворачивания."
+                                        android:text="  Подкладка: Стачивают детали спинки, оставляя дырочку на расстоянии 1,5см снизу. Стачивают тулья между собой. Притачивают донышко, оставляя дырочку размером 5-6см для выворачивания."
                                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                                         android:textSize="15sp" />
 
@@ -249,7 +249,7 @@
                                         android:layout_marginBottom="5dp"
                                         android:fontFamily="@font/ubuntu_light"
                                         android:gravity="fill"
-                                        android:text="Подкладку притачивают с основе. выворачивают на лицевую сторону. Вытаскивают резинку на лицо. Зашивают дырочку в подкладке на донышке."
+                                        android:text="  Подкладку притачивают с основе. выворачивают на лицевую сторону. Вытаскивают резинку на лицо. Зашивают дырочку в подкладке на донышке."
                                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                                         android:textSize="15sp" />
 
@@ -261,7 +261,7 @@
                                         android:layout_marginBottom="5dp"
                                         android:fontFamily="@font/ubuntu_light"
                                         android:gravity="fill"
-                                        android:text="Выполняют отделочную строчку по низу тульев на расстоянии 0,1-0,2см со стороны тульев."
+                                        android:text="  Выполняют отделочную строчку по низу тульев на расстоянии 0,1-0,2см со стороны тульев."
                                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                                         android:textSize="15sp" />
 
@@ -273,7 +273,7 @@
                                         android:layout_marginBottom="10dp"
                                         android:fontFamily="@font/ubuntu_light"
                                         android:gravity="fill"
-                                        android:text="Утюжат готовую панаму на колодке. "
+                                        android:text="  Утюжат готовую панаму на колодке. "
                                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                                         android:textSize="15sp" />
                                 </LinearLayout>

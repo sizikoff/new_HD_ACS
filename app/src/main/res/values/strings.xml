@@ -6,7 +6,7 @@
     <string name="txtHlpRight">txtHlpRight</string>
     <string name="txtNavLeftHeader">Тех. процесс</string>
     <string name="txtNavRightHeader">Отчёты</string>
-    <string name="txtWrkPrs">Отчёты: Успеваемость сотрудников</string>
+    <string name="txtWrkPrs">Отчёты: Продуктивность</string>
     <string name="txtManufProd">Отчёты: Произведённая продукция</string>
     <string name="txtDefProd">Отчёты: Забракованная продукция</string>
     <string name="txtStorage">Отчёты: Склад</string>
@@ -39,32 +39,6 @@
     <string name="edtTxtColorHint">Цвет</string>
     <string name="edtTxtWorkerHint">Сотрудник</string>
     <string name="edtTxtAmountHint">Количество</string>
-    <string name="edtTxtDateMP">20.02.2022 17:40</string>
-    <string name="edtTxtModelMP">Модель: Картуз</string>
-    <string name="edtTxtMaterialMP">Материал: Кашемир</string>
-    <string name="edtTxtColorMP">Цвет: чёрный</string>
-    <string name="edtTxtWorkerMP">Сотрудник: Елена</string>
-    <string name="edtTxtAmountMP">Количество: 15</string>
-    <string name="edtTxtDateMP2">20.02.2022 17:15</string>
-    <string name="edtTxtWorkerMP2">Сотрудник: Анжела</string>
-    <string name="edtTxtAmountMP2">Количество: 13</string>
-    <string name="edtTxtMaterialS">Материал: Кашемир</string>
-    <string name="edtTxtMaterialS2">Материал: Эко-кожа</string>
-    <string name="edtTxtMaterialS3">Материал: Пальто</string>
-    <string name="edtTxtMaterialS4">Материал: Плащёво-курточные</string>
-    <string name="edtTxtAmountS">Количество: 10</string>
-    <string name="edtTxtAmountS2">Количество: 5</string>
-    <string name="edtTxtAmountS3">Количество: 16</string>
-    <string name="edtTxtAmountS4">Количество: 13</string>
-    <string name="edtTxtAmountDP">Количество: 1</string>
-    <string name="edtTxtAmountDP2">Количество: 3</string>
-    <string name="edtTxtMPAmountWP">Произведено: 15</string>
-    <string name="edtTxtDPAmountWP">Брак: 1</string>
-    <string name="edtTxtMPAmountWP2">Произведено: 13</string>
-    <string name="edtTxtDPAmountWP2">Брак: 3</string>
-
-    <string name="txtNavLeft1">В даный момент эта шторка не предоставляет доступ к ресурсам по причине их отсутствия.</string>
-    <string name="txtNavLeft2">Программа будет доробатыватся и данный элемент интерфейса будет доделан, как и ресурсы к которым он будет вести.</string>
 
     <string name="btnSelectPost">Выберите должность</string>
     <string name="btnSelectSeamstress">Швея</string>
@@ -92,11 +66,66 @@
     <string name="none"></string>
 
 
+    <!--    Новый список строк-->
+    <string name="snos_uspevaemosti">\n20.05.2022 17:40\n\nСотрудник:Елена\n\nПроизведено:15\n\nБрак:1\n</string>
+    <string name="snos_uspevaemosti2">\n20.05.2022 17:10\n\nСотрудник:Анджела\n\nПроизведено:13\n\nБрак:3\n</string>
+    <string name="snos_uspevaemosti3">\n20.05.2022 17:16\n\nСотрудник:Олеся\n\nПроизведено:15\n\nБрак:1\n</string>
+    <string name="snos_uspevaemosti4">\n20.05.2022 17:15\n\nСотрудник:Елена\n\nПроизведено:13\n\nБрак:3\n</string>
+    <string name="snos_uspevaemosti5">\n20.05.2022 17:00\n\nСотрудник:Анастасия\n\nПроизведено:14\n\nБрак:3\n</string>
+    <string name="snos_uspevaemosti6">\n20.05.2022 15:40\n\nСотрудник:Ирина\n\nПроизведено:14\n\nБрак:2\n</string>
+    <string name="snos_uspevaemosti7">\n20.05.2022 15:20\n\nСотрудник:Алёна\n\nПроизведено:15\n\nБрак:3\n</string>
+    <string name="snos_uspevaemosti8">\n20.05.2022 15:15\n\nСотрудник:Дарья\n\nПроизведено:13\n\nБрак:1\n</string>
+    <string name="snos_uspevaemosti9">\n20.05.2022 15:15\n\nСотрудник:Галина\n\nПроизведено:12\n\nБрак:2\n</string>
+    <string name="snos_uspevaemosti10">\n20.05.2022 15:10\n\nСотрудник:Марина\n\nПроизведено:14\n\nБрак:3\n</string>
+    <string name="snos_uspevaemosti11">\n20.05.2022 14:45\n\nСотрудник:Юлия\n\nПроизведено:14\n\nБрак:0\n</string>
+    <string name="snos_uspevaemosti12">\n20.05.2022 14:10\n\nСотрудник:Ольга\n\nПроизведено:10\n\nБрак:1\n</string>
+    <string name="snos_uspevaemosti13">\n20.05.2022 13:50\n\nСотрудник:Тьяна\n\nПроизведено:7\n\nБрак:3\n</string>
+    <string name="snos_uspevaemosti14">\n20.05.2022 13:10\n\nСотрудник:Нурана\n\nПроизведено:6\n\nБрак:0\n</string>
+    <string name="snos_uspevaemosti15">\n20.05.2022 13:02\n\nСотрудник:Татьяна\n\nПроизведено:5\n\nБрак:2\n</string>
 
+    <string name="snos_defprod">\n20.02.2022 17:40\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Елена\n\nКоличество:1\n</string>
+    <string name="snos_defprod2">\n20.02.2022 17:10\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Анджела\n\nКоличество:3\n</string>
+    <string name="snos_defprod3">\n20.02.2022 17:16\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Олеся\n\nКоличество:1\n</string>
+    <string name="snos_defprod4">\n20.02.2022 17:15\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Елена\n\nКоличество:3\n</string>
+    <string name="snos_defprod5">\n20.02.2022 17:00\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Анастасия\n\nКоличество:3\n</string>
+    <string name="snos_defprod6">\n20.02.2022 15:40\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Ирина\n\nКоличество:2\n</string>
+    <string name="snos_defprod7">\n20.02.2022 15:20\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Алёна\n\nКоличество:3\n</string>
+    <string name="snos_defprod8">\n20.02.2022 15:15\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Дарья\n\nКоличество:1\n</string>
+    <string name="snos_defprod9">\n20.02.2022 15:15\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Галина\n\nКоличество:2\n</string>
+    <string name="snos_defprod10">\n20.02.2022 15:10\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Марина\n\nКоличество:3\n</string>
+    <string name="snos_defprod11">\n20.02.2022 14:10\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Ольга\n\nКоличество:1\n</string>
+    <string name="snos_defprod12">\n20.02.2022 13:50\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Тьяна\n\nКоличество:3\n</string>
+    <string name="snos_defprod13">\n20.02.2022 13:02\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Татьяна\n\nКоличество:2\n</string>
 
+    <string name="snos_prod">\n20.02.2022 17:40\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Елена\n\nКоличество:15\n</string>
+    <string name="snos_prod2">\n20.02.2022 17:10\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Анджела\n\nКоличество:13\n</string>
+    <string name="snos_prod3">\n20.02.2022 17:16\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Олеся\n\nКоличество:15\n</string>
+    <string name="snos_prod4">\n20.02.2022 17:15\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Елена\n\nКоличество:13\n</string>
+    <string name="snos_prod5">\n20.02.2022 17:00\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Анастасия\n\nКоличество:14\n</string>
+    <string name="snos_prod6">\n20.02.2022 15:40\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Ирина\n\nКоличество:14\n</string>
+    <string name="snos_prod7">\n20.02.2022 15:20\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Алёна\n\nКоличество:15\n</string>
+    <string name="snos_prod8">\n20.02.2022 15:15\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Дарья\n\nКоличество:13\n</string>
+    <string name="snos_prod9">\n20.02.2022 15:15\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Галина\n\nКоличество:12\n</string>
+    <string name="snos_prod10">\n20.05.2022 15:10\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Марина\n\nКоличество:14\n</string>
+    <string name="snos_prod11">\n20.05.2022 14:45\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Юлия\n\nКоличество:14\n</string>
+    <string name="snos_prod12">\n20.05.2022 14:10\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Ольга\n\nКоличество:10\n</string>
+    <string name="snos_prod13">\n20.05.2022 13:50\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Тьяна\n\nКоличество:7\n</string>
+    <string name="snos_prod14">\n20.05.2022 13:10\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Нурана\n\nКоличество:6\n</string>
+    <string name="snos_prod15">\n20.05.2022 13:02\n\nМодель: Картуз\n\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nСотрудник:Татьяна\n\nКоличество:5\n</string>
 
-<!--    Новый список строк-->
-    <string name="snos_uspevaemosti">\n20.02.2022 17:40\n\nСотрудник:Елена\n\nПроизведено:15\n\nБрак:1\n</string>
-    <string name="snos_uspevaemosti2">\n20.02.2022 17:15\n\nСотрудник:Анджела\n\nПроизведено:13\n\nБрак:3\n</string>
+    <string name="snos_stor">\nМатериал: Кашемир\n\nЦвет: Чёрный\n\nКоличество:1\n</string>
+    <string name="snos_stor2">\nМатериал: Кашемир\n\nЦвет: Белый\n\nКоличество:8\n</string>
+    <string name="snos_stor3">\nМатериал: Эко-кожа\n\nЦвет: Чёрный\n\nКоличество:10\n</string>
+    <string name="snos_stor4">\nМатериал: Эко-кожа\n\nЦвет: Белый\n\nКоличество:14\n</string>
+    <string name="snos_stor5">\nМатериал: Пальто\n\nЦвет: Чёрный\n\nКоличество:7\n</string>
+    <string name="snos_stor6">\nМатериал: Пальто\n\nЦвет: Белый\n\nКоличество:8\n</string>
+    <string name="snos_stor7">\nМатериал: Плащево-курточные\n\nЦвет: Чёрный\n\nКоличество:4\n</string>
+    <string name="snos_stor8">\nМатериал: Плащево-курточные\n\nЦвет: Белый\n\nКоличество:6\n</string>
+    <string name="snos_stor9">\nМатериал: Эко-нейлон\n\nЦвет: Чёрный\n\nКоличество:6\n</string>
+    <string name="snos_stor10">\nМатериал: Эко-нейлон\n\nЦвет: Белый\n\nКоличество:2\n</string>
+    <string name="snos_stor11">\nМатериал: Ангора\n\nЦвет: Чёрный\n\nКоличество:2\n</string>
+    <string name="snos_stor12">\nМатериал: Ангора\n\nЦвет: Белый\n\nКоличество:5\n</string>
+    <string name="snos_stor13">\nМатериал: Шерсть\n\nЦвет: Чёрный\n\nКоличество:9\n</string>
+    <string name="snos_stor14">\nМатериал: Шерсть\n\nЦвет: Белый\n\nКоличество:5\n</string>
 
 </resources>

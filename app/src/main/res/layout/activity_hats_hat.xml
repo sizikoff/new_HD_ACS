@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HatsHatActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="50dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/fileds"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:elevation="1dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/txtHat"
+                    android:textSize="30sp" />
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnNavLeftOpener"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/none"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/arrow"
+                    android:textSize="15sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4">
+
+                        </FrameLayout>
+
+                        <androidx.core.widget.NestedScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fillViewport="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/textView51"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:fontFamily="@font/ubuntu_medium"
+                                        android:gravity="fill"
+                                        android:text="  Поузловая обработка головного убора - ШЛЯПА."
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                        android:textSize="15sp" />
+
+                                    <TextView
+                                        android:id="@+id/textView55"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:fontFamily="@font/ubuntu_light"
+                                        android:gravity="fill"
+                                        android:text="  Шляпа состоит из деталей основной ткани - донышко, тулья-2д., и поля - 2д."
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                        android:textSize="15sp" />
+
+                                    <TextView
+                                        android:id="@+id/textView52"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:fontFamily="@font/ubuntu_light"
+                                        android:gravity="fill"
+                                        android:text="  Поля стачиваются между собой по кругу на расстоянии 0,7 см от края."
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                        android:textSize="15sp" />
+
+                                    <ImageView
+                                        android:id="@+id/imageView2"
+                                        android:layout_width="275dp"
+                                        android:layout_height="275dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:src="@drawable/hat" />
+
+                                    <TextView
+                                        android:id="@+id/textView54"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:fontFamily="@font/ubuntu_light"
+                                        android:gravity="fill"
+                                        android:text="  Выворачиваются на лицо и отстрачиваются на расстоянии 0,7 от края."
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                        android:textSize="15sp" />
+
+                                    <TextView
+                                        android:id="@+id/textView43"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:fontFamily="@font/ubuntu_light"
+                                        android:gravity="fill"
+                                        android:text="  Делается сверху закрепляющая строчка. Тулья стачиваются между собой на расстоянии 0,7 см."
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                        android:textSize="15sp" />
+
+                                    <TextView
+                                        android:id="@+id/textView44"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:fontFamily="@font/ubuntu_light"
+                                        android:gravity="fill"
+                                        android:text="  Обметываются на оверлоке. Отстрачиваются на 0,1-0,2 см от шва."
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                        android:textSize="15sp" />
+
+                                    <TextView
+                                        android:id="@+id/textView45"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:fontFamily="@font/ubuntu_light"
+                                        android:gravity="fill"
+                                        android:text="  Притачивается донышко вкруг. Обметываются на оверлоке."
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                        android:textSize="15sp" />
+
+                                    <TextView
+                                        android:id="@+id/textView46"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:fontFamily="@font/ubuntu_light"
+                                        android:gravity="fill"
+                                        android:text="  Затем отстрачивается на 0,1-0,2 от шва со стороны тульев. Поля притачиваются к тульям по кругу. Обметываются на оверлоке."
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                        android:textSize="15sp" />
+
+                                    <TextView
+                                        android:id="@+id/textView47"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:fontFamily="@font/ubuntu_light"
+                                        android:gravity="fill"
+                                        android:text="  Внизу по тульям делается отделочная строчка на 0,1-0,2 см от шва."
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                        android:textSize="15sp" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.core.widget.NestedScrollView>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <ImageButton
+                    android:id="@+id/btnNavOpenerOpener2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/none"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/arrow"
+                    android:textSize="15sp"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frmBtmMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="13dp"
+            android:layout_weight="4"
+            android:background="@drawable/fileds">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imgBtnOptions"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@color/none"
+                    android:contentDescription="@string/imgbtnoptions"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/options"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:background="@drawable/fileds"
+                    android:padding="10dp">
+
+                    <ImageButton
+                        android:id="@+id/imgBtnHome"
+                        android:layout_width="70dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:background="@color/none"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hdlogo"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </FrameLayout>
+
+                <ImageButton
+                    android:id="@+id/imgBtnProfile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@color/none"
+                    android:contentDescription="@string/imgbtnoprofile"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/profile"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/navBarLeft"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/dark_gray"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtNavLeftHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:gravity="center"
+                        android:text="@string/txtNavLeftHeader"
+                        android:textSize="25sp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4">
+
+                    </FrameLayout>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:orientation="horizontal">
+
+                                        <ImageButton
+                                            android:id="@+id/imgBtnHatsOpener"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="center"
+                                            android:layout_marginEnd="10dp"
+                                            android:layout_weight="2"
+                                            android:background="@color/none"
+                                            android:fontFamily="@font/ubuntu_medium"
+                                            android:rotation="180"
+                                            android:scaleType="fitCenter"
+                                            android:src="@drawable/arrow" />
+
+                                        <TextView
+                                            android:id="@+id/txtHats"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_marginBottom="5dp"
+                                            android:layout_weight="2"
+                                            android:fontFamily="@font/ubuntu_bold"
+                                            android:gravity="center"
+                                            android:text="@string/txtHats"
+                                            android:textSize="20sp" />
+
+                                    </LinearLayout>
+
+                                    <FrameLayout
+                                        android:id="@+id/layHats"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:visibility="gone">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+
+                                            <FrameLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="2">
+
+                                            </FrameLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginRight="10dp"
+                                                android:layout_weight="1"
+                                                android:orientation="vertical">
+
+                                                <Button
+                                                    android:id="@+id/btnPanama"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="-5dp"
+                                                    android:layout_marginBottom="-5dp"
+                                                    android:background="@color/none"
+                                                    android:fontFamily="@font/ubuntu_light"
+                                                    android:gravity="fill"
+                                                    android:text="@string/txtPanama"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                                    android:textSize="15sp" />
+
+                                                <Button
+                                                    android:id="@+id/btnHat"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="-5dp"
+                                                    android:layout_marginBottom="-5dp"
+                                                    android:background="@color/none"
+                                                    android:fontFamily="@font/ubuntu_light"
+                                                    android:gravity="fill"
+                                                    android:text="@string/txtHat"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                                    android:textSize="15sp" />
+
+                                                <Button
+                                                    android:id="@+id/btnVisor"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="-5dp"
+                                                    android:layout_marginBottom="-5dp"
+                                                    android:background="@color/none"
+                                                    android:fontFamily="@font/ubuntu_light"
+                                                    android:gravity="fill"
+                                                    android:text="@string/txtVisor"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                                    android:textSize="15sp" />
+
+                                                <Button
+                                                    android:id="@+id/btnKartuz"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="-5dp"
+                                                    android:layout_marginBottom="-5dp"
+                                                    android:background="@color/none"
+                                                    android:fontFamily="@font/ubuntu_light"
+                                                    android:gravity="fill"
+                                                    android:text="@string/txtKartuz"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                                    android:textSize="15sp" />
+
+                                                <Button
+                                                    android:id="@+id/btnCap"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="-5dp"
+                                                    android:layout_marginBottom="-5dp"
+                                                    android:background="@color/none"
+                                                    android:fontFamily="@font/ubuntu_light"
+                                                    android:gravity="fill"
+                                                    android:text="@string/txtCap"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                                    android:textSize="15sp" />
+
+                                                <Button
+                                                    android:id="@+id/btnBeretFr"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="-5dp"
+                                                    android:layout_marginBottom="-5dp"
+                                                    android:background="@color/none"
+                                                    android:fontFamily="@font/ubuntu_light"
+                                                    android:gravity="fill"
+                                                    android:text="@string/txtBeretFr"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                                    android:textSize="15sp" />
+
+                                                <Button
+                                                    android:id="@+id/btnBeretVol"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="-5dp"
+                                                    android:layout_marginBottom="-5dp"
+                                                    android:background="@color/none"
+                                                    android:fontFamily="@font/ubuntu_light"
+                                                    android:gravity="fill"
+                                                    android:text="@string/txtBeretVol"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                                    android:textSize="15sp" />
+
+                                                <Button
+                                                    android:id="@+id/btnBeretCz"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="-5dp"
+                                                    android:layout_marginBottom="-5dp"
+                                                    android:background="@color/none"
+                                                    android:fontFamily="@font/ubuntu_light"
+                                                    android:gravity="fill"
+                                                    android:text="@string/txtBeretCz"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                                    android:textSize="15sp" />
+
+                                                <Button
+                                                    android:id="@+id/btnCapLinda"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="-5dp"
+                                                    android:layout_marginBottom="-5dp"
+                                                    android:background="@color/none"
+                                                    android:fontFamily="@font/ubuntu_light"
+                                                    android:gravity="fill"
+                                                    android:text="@string/txtCapLinda"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                                    android:textSize="15sp" />
+
+                                                <Button
+                                                    android:id="@+id/btnUshanka"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="-5dp"
+                                                    android:layout_marginBottom="-5dp"
+                                                    android:background="@color/none"
+                                                    android:fontFamily="@font/ubuntu_light"
+                                                    android:gravity="fill"
+                                                    android:text="@string/txtUshanka"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                                    android:textSize="15sp" />
+
+                                                <Button
+                                                    android:id="@+id/btnJockeyka"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:background="@color/none"
+                                                    android:fontFamily="@font/ubuntu_light"
+                                                    android:gravity="fill"
+                                                    android:text="@string/txtJockeyka"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                                    android:textSize="15sp" />
+
+                                                <Button
+                                                    android:id="@+id/btnJockeykaFurr"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:background="@color/none"
+                                                    android:fontFamily="@font/ubuntu_light"
+                                                    android:gravity="fill"
+                                                    android:text="@string/txtJockeykaFurr"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                                    android:textSize="15sp" />
+
+                                                <Button
+                                                    android:id="@+id/btnEightblade"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="5dp"
+                                                    android:layout_marginBottom="5dp"
+                                                    android:background="@color/none"
+                                                    android:fontFamily="@font/ubuntu_light"
+                                                    android:gravity="fill"
+                                                    android:text="@string/txtEightblade"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                                    android:textSize="15sp" />
+
+                                                <ImageButton
+                                                    android:id="@+id/imgBtnHatsAdd"
+                                                    android:layout_width="30dp"
+                                                    android:layout_height="30dp"
+                                                    android:layout_gravity="center"
+                                                    android:background="@color/none"
+                                                    android:fontFamily="@font/ubuntu_medium"
+                                                    android:scaleType="fitCenter"
+                                                    app:srcCompat="@drawable/plus" />
+
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                    </FrameLayout>
+
+                                </LinearLayout>
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:orientation="horizontal">
+
+                                        <ImageButton
+                                            android:id="@+id/imgBtnMerchOpener"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="center"
+                                            android:layout_marginEnd="10dp"
+                                            android:layout_weight="2"
+                                            android:background="@color/none"
+                                            android:fontFamily="@font/ubuntu_medium"
+                                            android:rotation="180"
+                                            android:scaleType="fitCenter"
+                                            android:src="@drawable/arrow" />
+
+                                        <TextView
+                                            android:id="@+id/txtMerch"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_marginBottom="5dp"
+                                            android:layout_weight="2"
+                                            android:fontFamily="@font/ubuntu_bold"
+                                            android:gravity="center"
+                                            android:text="@string/txtMerch"
+                                            android:textSize="20sp" />
+
+                                    </LinearLayout>
+
+                                    <FrameLayout
+                                        android:id="@+id/layMerch"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:visibility="gone">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+
+                                            <FrameLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="2">
+
+                                            </FrameLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:id="@+id/textView40"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="5dp"
+                                                    android:layout_marginBottom="10dp"
+                                                    android:fontFamily="@font/ubuntu_light"
+                                                    android:gravity="fill"
+                                                    android:text="@string/txtKerchief"
+                                                    android:textSize="17sp" />
+
+                                                <TextView
+                                                    android:id="@+id/textView41"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="5dp"
+                                                    android:layout_marginBottom="10dp"
+                                                    android:fontFamily="@font/ubuntu_light"
+                                                    android:gravity="fill"
+                                                    android:text="@string/txtScarf"
+                                                    android:textSize="17sp" />
+
+                                                <TextView
+                                                    android:id="@+id/textView42"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="5dp"
+                                                    android:layout_marginBottom="10dp"
+                                                    android:fontFamily="@font/ubuntu_light"
+                                                    android:gravity="fill"
+                                                    android:text="@string/txtShopper"
+                                                    android:textSize="17sp" />
+
+                                                <ImageButton
+                                                    android:id="@+id/imgBtnMerchAdd"
+                                                    android:layout_width="30dp"
+                                                    android:layout_height="30dp"
+                                                    android:layout_gravity="center"
+                                                    android:background="@color/none"
+                                                    android:fontFamily="@font/ubuntu_medium"
+                                                    android:scaleType="fitCenter"
+                                                    app:srcCompat="@drawable/plus" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </FrameLayout>
+                                </LinearLayout>
+
+                            </FrameLayout>
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4">
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btnNavLeftCloser"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/none"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/arrow"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/navBarCenter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+        </FrameLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

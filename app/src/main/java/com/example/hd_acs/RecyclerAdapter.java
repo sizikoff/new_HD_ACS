@@ -42,6 +42,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             public void onClick(View v) {
                 if(holder.title.getText().equals("Панама")){
                     context.startActivity(new Intent(context, HatsPanamaActivity.class));
+                }else if(holder.title.getText().equals("Шляпа")) {
+                    context.startActivity(new Intent(context, HatsHatActivity.class));
+                }else if(holder.title.getText().equals("Козырёк")) {
+                    context.startActivity(new Intent(context, HatsVisorActivity.class));
+                }else if(holder.title.getText().equals("Картуз")) {
+                    context.startActivity(new Intent(context, HatsKartuzActivity.class));
                 }
             }
         });

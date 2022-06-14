@@ -40,12 +40,12 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         arrayList.add(new Data("Шляпа"));
         arrayList.add(new Data("Козырёк"));
         arrayList.add(new Data("Картуз"));
+        arrayList.add(new Data("Ушанка"));
         arrayList.add(new Data("Кепка"));
         arrayList.add(new Data("Французский берет"));
         arrayList.add(new Data("Объемный берет"));
         arrayList.add(new Data("Берет Чехия"));
         arrayList.add(new Data("Кепка Линда"));
-        arrayList.add(new Data("Ушанка"));
         arrayList.add(new Data("Жокейка"));
         arrayList.add(new Data("Жокейка с мех. ушами"));
         arrayList.add(new Data("Восьмиклинка"));

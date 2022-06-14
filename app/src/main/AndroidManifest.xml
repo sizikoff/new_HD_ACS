@@ -11,8 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
         <activity
+            android:name=".HatsKartuzActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HatsVisorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HatsHatActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity2"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".HatsPanamaActivity"
             android:exported="false" />
