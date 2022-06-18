@@ -133,7 +133,7 @@
                                     android:hint="@string/edtTxtModelHint"
                                     android:inputType="text"
                                     android:text=""
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/theme"
                                     android:textSize="20sp"
                                     app:met_baseColor="@color/white"
 
@@ -151,7 +151,7 @@
                                     android:hint="@string/edtTxtMaterialHint"
                                     android:inputType="text"
                                     android:text=""
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/theme"
                                     android:textSize="20sp"
                                     app:met_baseColor="@color/white"
 
@@ -169,7 +169,7 @@
                                     android:hint="@string/edtTxtColorHint"
                                     android:inputType="text"
                                     android:text=""
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/theme"
                                     android:textSize="20sp"
                                     app:met_baseColor="@color/white"
 
@@ -187,7 +187,7 @@
                                     android:hint="@string/edtTxtWorkerHint"
                                     android:inputType="text"
                                     android:text=""
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/theme"
                                     android:textSize="20sp"
                                     app:met_baseColor="@color/white"
 
@@ -206,7 +206,7 @@
                                     android:hint="@string/edtTxtAmountHint"
                                     android:inputType="number"
                                     android:text=""
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/theme"
                                     android:textSize="20sp"
                                     app:met_baseColor="@color/white"
 
@@ -232,6 +232,7 @@
                                     android:background="@drawable/fileds"
                                     android:fontFamily="@font/ubuntu_medium"
                                     android:gravity="center"
+                                    android:textColor="@color/theme"
                                     android:text="@string/btnCrtReport"
                                     android:textSize="20sp" />
 
@@ -344,7 +345,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/dark_gray"
             android:visibility="invisible">
 
             <LinearLayout

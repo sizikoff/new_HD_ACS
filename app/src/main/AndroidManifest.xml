@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.hd_acs">
 
     <application
@@ -9,7 +10,15 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Design.NoActionBar">
+        android:theme="@style/Theme.HD_ACS"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name="com.DayNightActivity"
+            android:exported="false"
+            android:label="@string/title_activity_day_night" />
+        <activity
+            android:name=".DBActivity"
+            android:exported="false" />
         <activity
             android:name=".HatsKartuzActivity"
             android:exported="false" />

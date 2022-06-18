@@ -296,8 +296,8 @@
             android:id="@+id/navBarLeft"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/light_gray"
             android:layout_weight="1"
-            android:background="@color/dark_gray"
             android:visibility="invisible">
 
             <LinearLayout

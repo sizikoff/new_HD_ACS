@@ -11,9 +11,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.example.hd_acs.database.ProductionContract;
+import com.example.hd_acs.database.ProductionDbHelper;
 
 public class ManufacturedProductsCreateActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -21,9 +22,7 @@ public class ManufacturedProductsCreateActivity extends AppCompatActivity implem
      private ImageButton btnNavRightOpener, btnNavRightCloser, imgBtnOptions, imgBtnHome, imgBtnProfile;
      private FrameLayout navBarLeft;
      private EditText edTxtModel, edTxtMaterial, edTxtColor, edTxtWorker, edTxtAmount;
-     private DatabaseReference mDataBase;
 
-     DBHelper dbHelper;
 
      private String ManufProd_KEY = "ManufProd";
 
@@ -31,6 +30,7 @@ public class ManufacturedProductsCreateActivity extends AppCompatActivity implem
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manufactured_products_create);
+
 
         btnWrkPrs = (Button) findViewById(R.id.btnDefProd);
         btnManufProd = (Button) findViewById(R.id.btnManufProd);
@@ -53,16 +53,39 @@ public class ManufacturedProductsCreateActivity extends AppCompatActivity implem
         edTxtWorker = (EditText) findViewById(R.id.edTxtWorker);
         edTxtAmount = (EditText) findViewById(R.id.edTxtAmount);
 
-        dbHelper = new DBHelper(this);
-
-        mDataBase = FirebaseDatabase.getInstance().getReference(ManufProd_KEY);
-
         btnWrkPrs.setOnClickListener(this);
         btnManufProd.setOnClickListener(this);
         btnStorage.setOnClickListener(this);
         btnManufProdCrt.setOnClickListener(this);
         btnStorageCrt.setOnClickListener(this);
-        btnCrtReport.setOnClickListener(this);
+        btnCrtReport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ProductionDbHelper dbHelper = new ProductionDbHelper(ManufacturedProductsCreateActivity.this);
+                SQLiteDatabase mDatabase = dbHelper.getWritableDatabase();
+
+                String model = edTxtModel.getText().toString();
+                String material = edTxtMaterial.getText().toString();
+                String color = edTxtColor.getText().toString();
+                String worker = edTxtWorker.getText().toString();
+                String amount = edTxtAmount.getText().toString();
+
+                ContentValues cv = new ContentValues();
+                cv.put(ProductionContract.ProductionEntry.COLUMN_MODEL,model);
+                cv.put(ProductionContract.ProductionEntry.COLUMN_MATERIAL,material);
+                cv.put(ProductionContract.ProductionEntry.COLUMN_COLOR,color);
+                cv.put(ProductionContract.ProductionEntry.COLUMN_EMPLOEYY,worker);
+                cv.put(ProductionContract.ProductionEntry.COLUMN_AMOUNT,amount);
+
+                mDatabase.insert(ProductionContract.ProductionEntry.TABLE_NAME,null,cv);
+                edTxtModel.getText().clear();
+                edTxtMaterial.getText().clear();
+                edTxtColor.getText().clear();
+                edTxtWorker.getText().clear();
+                edTxtAmount.getText().clear();
+                Toast.makeText(ManufacturedProductsCreateActivity.this, "Отчет создан", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         btnNavRightOpener.setOnClickListener(this);
         btnNavRightCloser.setOnClickListener(this);
@@ -75,16 +98,6 @@ public class ManufacturedProductsCreateActivity extends AppCompatActivity implem
 
     @Override
     public void onClick(View v) {
-        String model = edTxtModel.getText().toString();
-        String material = edTxtMaterial.getText().toString();
-        String color = edTxtColor.getText().toString();
-        String worker = edTxtWorker.getText().toString();
-        String amount = edTxtAmount.getText().toString();
-
-        SQLiteDatabase database = dbHelper.getWritableDatabase();
-
-        ContentValues contentValuse = new ContentValues();
-
         switch (v.getId()) {
             case R.id.btnDefProd:
                 Intent actWPA = new Intent(ManufacturedProductsCreateActivity.this, WorkersProgressActivity.class);

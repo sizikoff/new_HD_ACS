@@ -29,6 +29,7 @@
             android:layout_marginBottom="40dp"
             android:fontFamily="@font/eldwin_script_semi_bold"
             android:gravity="center_horizontal"
+            android:textColor="@color/theme"
             android:text="@string/textEnter"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="60sp" />
@@ -44,6 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
+                android:textColor="@color/theme"
                 android:fontFamily="@font/eldwin_script_semi_bold"
                 android:onClick="btnEnter"
                 android:text="@string/btnEnter"
@@ -55,6 +57,7 @@
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/theme"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/eldwin_script_semi_bold"
                 android:onClick="btnRegistr"

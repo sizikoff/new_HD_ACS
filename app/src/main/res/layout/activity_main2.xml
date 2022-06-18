@@ -20,13 +20,11 @@
             android:id="@+id/left_menu"
             android:layout_width="300dp"
             android:layout_height="match_parent"
-            android:layout_weight="10"
-            android:background="@color/dark_gray">
+            android:layout_weight="10">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/dark_gray"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -137,7 +135,7 @@
                     android:layout_gravity="center"
                     android:fontFamily="@font/ubuntu_medium"
                     android:text="@string/productivity"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
             </FrameLayout>
 
@@ -423,7 +421,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
-                android:background="@color/dark_gray"
                 android:orientation="vertical">
 
                 <TextView
@@ -458,6 +455,7 @@
                     android:background="@color/none"
                     android:fontFamily="@font/ubuntu_medium"
                     android:text="@string/btnWrkPrs"
+                    android:textColor="@color/theme"
                     android:textSize="15sp" />
 
                 <Button
@@ -470,6 +468,7 @@
                     android:background="@color/none"
                     android:fontFamily="@font/ubuntu_medium"
                     android:text="@string/btnManufProd"
+                    android:textColor="@color/theme"
                     android:textSize="15sp" />
 
                 <Button
@@ -482,6 +481,7 @@
                     android:background="@color/none"
                     android:fontFamily="@font/ubuntu_medium"
                     android:text="@string/btnDefProd"
+                    android:textColor="@color/theme"
                     android:textSize="15sp" />
 
                 <Button
@@ -493,6 +493,7 @@
                     android:layout_marginBottom="10dp"
                     android:background="@color/none"
                     android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="@color/theme"
                     android:text="@string/btnStorage"
                     android:textSize="15sp" />
 
@@ -514,8 +515,9 @@
                     android:layout_marginBottom="10dp"
                     android:background="@color/none"
                     android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="@color/theme"
                     android:text="@string/btnManufProdCrt"
-                    android:textSize="15sp" />
+                    android:textSize="10sp" />
 
                 <Button
                     android:id="@+id/btnDefProdCrt"
@@ -526,8 +528,9 @@
                     android:layout_marginBottom="10dp"
                     android:background="@color/none"
                     android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="@color/theme"
                     android:text="@string/btnDefProdCrt"
-                    android:textSize="15sp" />
+                    android:textSize="10sp" />
 
                 <Button
                     android:id="@+id/btnStorageCrt"
@@ -538,8 +541,9 @@
                     android:layout_marginBottom="10dp"
                     android:background="@color/none"
                     android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="@color/theme"
                     android:text="@string/btnStorageCrt"
-                    android:textSize="15sp" />
+                    android:textSize="10sp" />
 
                 <FrameLayout
                     android:layout_width="match_parent"

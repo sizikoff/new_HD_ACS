@@ -2,18 +2,29 @@ package com.example.hd_acs;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.Toast;
+
+import com.example.hd_acs.database.ProductionDbHelper;
+import com.example.hd_acs.database3.DefectContract.*;
+import com.example.hd_acs.database3.DefectDBHelper;
+
 
 public class DefectProductsCreateActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btnWrkPrs, btnManufProd, btnStorage, btnManufProdCrt, btnStorageCrt,btnDefProd ,btnDefProdCrt;
+    private Button btnWrkPrs, btnManufProd, btnStorage, btnManufProdCrt, btnStorageCrt,btnDefProd ,btnDefProdCrt,btnCrtReport;
     private ImageButton btnNavRightOpener, btnNavLeftCloser, imgBtnOptions, imgBtnHome, imgBtnProfile;
     private FrameLayout navBarLeft;
+
+    EditText edTxtModel,edTxtMaterial,edTxtColor,edTxtWorker,edTxtAmount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +44,13 @@ public class DefectProductsCreateActivity extends AppCompatActivity implements V
         imgBtnOptions = (ImageButton) findViewById(R.id.imgBtnOptions);
         imgBtnHome = (ImageButton) findViewById(R.id.imgBtnHome);
         imgBtnProfile = (ImageButton) findViewById(R.id.imgBtnProfile);
+        btnCrtReport =  findViewById(R.id.btnCrtReport);
+
+        edTxtModel =  findViewById(R.id.edTxtModel);
+        edTxtMaterial =  findViewById(R.id.edTxtMaterial);
+        edTxtColor =  findViewById(R.id.edTxtColor);
+        edTxtWorker =  findViewById(R.id.edTxtWorker);
+        edTxtAmount =  findViewById(R.id.edTxtAmount);
 
         navBarLeft = (FrameLayout) findViewById(R.id.navBarLeft);
 
@@ -50,6 +68,34 @@ public class DefectProductsCreateActivity extends AppCompatActivity implements V
         imgBtnOptions.setOnClickListener(this);
         imgBtnHome.setOnClickListener(this);
         imgBtnProfile.setOnClickListener(this);
+
+        btnCrtReport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DefectDBHelper dbHelper = new DefectDBHelper(DefectProductsCreateActivity.this);
+                SQLiteDatabase mDatabase = dbHelper.getWritableDatabase();
+                String model = edTxtModel.getText().toString();
+                String material = edTxtMaterial.getText().toString();
+                String color = edTxtColor.getText().toString();
+                String worker = edTxtWorker.getText().toString();
+                String amount = edTxtAmount.getText().toString();
+                ContentValues cv = new ContentValues();
+                cv.put(DefectEntry.COLUMN_MODEL,model);
+                cv.put(DefectEntry.COLUMN_MATERIAL,material);
+                cv.put(DefectEntry.COLUMN_COLOR,color);
+                cv.put(DefectEntry.COLUMN_EMPLOEYY,worker);
+                cv.put(DefectEntry.COLUMN_AMOUNT,amount);
+                mDatabase.insert(DefectEntry.TABLE_NAME,null,cv);
+                System.out.println(mDatabase.insert(DefectEntry.TABLE_NAME,null,cv));
+                edTxtModel.getText().clear();
+                edTxtMaterial.getText().clear();
+                edTxtColor.getText().clear();
+                edTxtWorker.getText().clear();
+                edTxtAmount.getText().clear();
+                Toast.makeText(DefectProductsCreateActivity.this, "Отчет создан", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     @Override

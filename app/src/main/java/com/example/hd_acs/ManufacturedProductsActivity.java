@@ -1,24 +1,40 @@
 package com.example.hd_acs;
 
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 
+import com.example.hd_acs.database.ProdAdapter;
+import com.example.hd_acs.database.ProductionContract;
+import com.example.hd_acs.database.ProductionDbHelper;
+
 public class ManufacturedProductsActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btnWrkPrs, btnManufProd, btnStorage, btnManufProdCrt, btnStorageCrt,btnDefProd ,btnDefProdCrt;
     private ImageButton btnNavLeftOpener, btnNavLeftCloser, imgBtnOptions, imgBtnHome, imgBtnProfile;
     private FrameLayout navBarLeft;
+    RecyclerView recyclerView;
+    private ProdAdapter mAdapter;
+    SQLiteDatabase mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manufactured_products);
+        ProductionDbHelper dbHelper = new ProductionDbHelper(this);
+        mDatabase = dbHelper.getWritableDatabase();
 
         btnWrkPrs = (Button) findViewById(R.id.btnDefProd);
         btnManufProd = (Button) findViewById(R.id.btnManufProd);
@@ -27,6 +43,26 @@ public class ManufacturedProductsActivity extends AppCompatActivity implements V
         btnStorageCrt = (Button) findViewById(R.id.btnStorageCrt);
         btnDefProd = (Button) findViewById(R.id.btnDefProd);
         btnDefProdCrt = (Button) findViewById(R.id.btnDefProdCrt);
+        recyclerView = findViewById(R.id.manufRecycler);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mAdapter = new ProdAdapter(this,getAllItems());
+        mAdapter.swapCursor(getAllItems());
+        recyclerView.setAdapter(mAdapter);
+
+        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0,
+                ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                return false;
+
+            }
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+                removeItem((long) viewHolder.itemView.getTag());
+
+            }
+        }).attachToRecyclerView(recyclerView);
 
         btnNavLeftOpener = (ImageButton) findViewById(R.id.btnNavLeftOpener);
         btnNavLeftCloser = (ImageButton) findViewById(R.id.btnNavLeftCloser);
@@ -102,5 +138,24 @@ public class ManufacturedProductsActivity extends AppCompatActivity implements V
                 navBarLeft.setVisibility(View.INVISIBLE);
                 break;
         }
+    }
+
+    private void removeItem(long id){
+        mDatabase.delete(ProductionContract.ProductionEntry.TABLE_NAME,
+                ProductionContract.ProductionEntry._ID + "=" + id,null);
+        mAdapter.swapCursor(getAllItems());
+    }
+    //returns a cursor
+    private Cursor getAllItems(){
+        return mDatabase.query(
+                ProductionContract.ProductionEntry.TABLE_NAME,
+                null,
+                null,
+                null,
+                null,
+                null,
+                ProductionContract.ProductionEntry.COLUMN_TIMESTAMP + " DESC"
+        );
+
     }
 }

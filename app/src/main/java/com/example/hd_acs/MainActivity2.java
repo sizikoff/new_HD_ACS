@@ -17,6 +17,8 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
+import com.DayNightActivity;
+
 import java.util.ArrayList;
 
 public class MainActivity2 extends AppCompatActivity implements View.OnClickListener {
@@ -25,6 +27,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
     private ArrayList<Data> arrayList;
     private ImageButton imgBtnHatsAdd, imgBtnMerchOpener, menu_lock_but, btnNavRightOpener, btnNavRightCloser, imgBtnHome;
     private Button btnWrkPrs, btnManufProd, btnStorage, btnManufProdCrt, btnStorageCrt,btnDefProd ,btnDefProdCrt;
+    ImageButton ImageButton,imgBtnOptions;
     private RecyclerAdapter recyclerAdapter;
     private LinearLayout osn_info, layLeft_menu;
     private FrameLayout navBarRight;
@@ -57,6 +60,8 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         btnStorageCrt = (Button) findViewById(R.id.btnStorageCrt);
         btnDefProd = (Button) findViewById(R.id.btnDefProd);
         btnDefProdCrt = (Button) findViewById(R.id.btnDefProdCrt);
+        ImageButton = (ImageButton) findViewById(R.id.imgBtnProfile);
+        imgBtnOptions = (ImageButton) findViewById(R.id.imgBtnOptions);
 
         imgBtnHatsAdd = findViewById(R.id.imgBtnHatsAdd);
         menu_lock_but = findViewById(R.id.menu_lock_but);
@@ -79,6 +84,22 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         btnStorageCrt.setOnClickListener(this);
         btnDefProd.setOnClickListener(this);
         btnDefProdCrt.setOnClickListener(this);
+
+        ImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity2.this,DBActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imgBtnOptions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity2.this, DayNightActivity.class);
+                startActivity(intent);
+            }
+        });
 
         menu_lock_but.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,8 +141,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         imgBtnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent BH = new Intent(MainActivity2.this, MainActivity2.class);
-                startActivity(BH);
+
             }
         });
 

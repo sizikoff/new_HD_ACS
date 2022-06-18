@@ -1,24 +1,41 @@
 package com.example.hd_acs;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 
+import com.example.hd_acs.database3.DefectAdapter;
+import com.example.hd_acs.database3.DefectDBHelper;
+import com.example.hd_acs.database4.StorageAdapter;
+import com.example.hd_acs.database4.StorageContract;
+import com.example.hd_acs.database4.StorageDBHelper;
+
 public class StorageActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btnWrkPrs, btnManufProd, btnStorage, btnManufProdCrt, btnStorageCrt,btnDefProd ,btnDefProdCrt;
     private ImageButton btnNavLeftOpener, btnNavLeftCloser, imgBtnOptions, imgBtnHome, imgBtnProfile;
     private FrameLayout navBarLeft;
+    RecyclerView recyclerView;
+    private StorageAdapter mAdapter;
+    SQLiteDatabase mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_storage);
+        StorageDBHelper dbHelper = new StorageDBHelper(this);
+        mDatabase = dbHelper.getWritableDatabase();
 
         btnWrkPrs = (Button) findViewById(R.id.btnDefProd);
         btnManufProd = (Button) findViewById(R.id.btnManufProd);
@@ -35,6 +52,27 @@ public class StorageActivity extends AppCompatActivity implements View.OnClickLi
         imgBtnProfile = (ImageButton) findViewById(R.id.imgBtnProfile);
 
         navBarLeft = (FrameLayout) findViewById(R.id.navBarLeft);
+
+        recyclerView = findViewById(R.id.storageRecycler);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mAdapter = new StorageAdapter(this,getAllItems());
+        mAdapter.swapCursor(getAllItems());
+        recyclerView.setAdapter(mAdapter);
+
+        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0,
+                ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                return false;
+
+            }
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+                removeItem((long) viewHolder.itemView.getTag());
+
+            }
+        }).attachToRecyclerView(recyclerView);
 
         btnWrkPrs.setOnClickListener(this);
         btnManufProd.setOnClickListener(this);
@@ -102,5 +140,23 @@ public class StorageActivity extends AppCompatActivity implements View.OnClickLi
                 navBarLeft.setVisibility(View.INVISIBLE);
                 break;
         }
+    }
+    private void removeItem(long id){
+        mDatabase.delete(StorageContract.StorageEntry.TABLE_NAME,
+                StorageContract.StorageEntry._ID + "=" + id,null);
+        mAdapter.swapCursor(getAllItems());
+    }
+    //returns a cursor
+    private Cursor getAllItems(){
+        return mDatabase.query(
+                StorageContract.StorageEntry.TABLE_NAME,
+                null,
+                null,
+                null,
+                null,
+                null,
+                StorageContract.StorageEntry.COLUMN_TIMESTAMP + " DESC"
+        );
+
     }
 }

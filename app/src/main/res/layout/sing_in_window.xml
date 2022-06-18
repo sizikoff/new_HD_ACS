@@ -20,9 +20,8 @@
             android:hint="@string/hnt_email"
             android:inputType="textEmailAddress"
             android:text=""
-            android:textColor="@color/white"
+            android:textColor="@color/theme"
             android:textSize="20sp"
-            app:met_baseColor="@color/white"
 
             app:met_errorColor="@color/error"
             app:met_primaryColor="@color/white"
@@ -35,9 +34,8 @@
             android:hint="@string/hnt_password"
             android:inputType="textPassword"
             android:text=""
-            android:textColor="@color/white"
+            android:textColor="@color/theme"
             android:textSize="20sp"
-            app:met_baseColor="@color/white"
 
             app:met_errorColor="@color/error"
             app:met_primaryColor="@color/white"
